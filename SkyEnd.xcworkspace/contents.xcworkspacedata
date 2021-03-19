@@ -4,4 +4,7 @@
    <FileRef
       location = "group:SkyEng/SkyEng.xcodeproj">
    </FileRef>
+   <FileRef
+      location = "group:NetworkSDK/NetworkSDK.xcodeproj">
+   </FileRef>
 </Workspace>
