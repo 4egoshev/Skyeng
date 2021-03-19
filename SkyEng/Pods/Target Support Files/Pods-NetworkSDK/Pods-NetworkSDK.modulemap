@@ -1,0 +1,6 @@
+module Pods_NetworkSDK {
+  umbrella header "Pods-NetworkSDK-umbrella.h"
+
+  export *
+  module * { export * }
+}

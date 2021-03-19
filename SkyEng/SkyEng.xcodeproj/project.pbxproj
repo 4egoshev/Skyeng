@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		58ACB34C32D9FD0CF7DF007E /* Pods_SkyEng.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA198069719D9A81B48B9EF0 /* Pods_SkyEng.framework */; };
 		5ECF3233260568C0007EC2BB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECF3232260568C0007EC2BB /* AppDelegate.swift */; };
 		5ECF3235260568C0007EC2BB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECF3234260568C0007EC2BB /* SceneDelegate.swift */; };
 		5ECF3237260568C0007EC2BB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECF3236260568C0007EC2BB /* ViewController.swift */; };
@@ -16,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2EE98A0B616D059C12F745A0 /* Pods-SkyEng.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SkyEng.release.xcconfig"; path = "Target Support Files/Pods-SkyEng/Pods-SkyEng.release.xcconfig"; sourceTree = "<group>"; };
+		3608BE322C995DA0D8F34629 /* Pods-SkyEng.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SkyEng.debug.xcconfig"; path = "Target Support Files/Pods-SkyEng/Pods-SkyEng.debug.xcconfig"; sourceTree = "<group>"; };
 		5ECF322F260568C0007EC2BB /* SkyEng.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SkyEng.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5ECF3232260568C0007EC2BB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5ECF3234260568C0007EC2BB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +27,7 @@
 		5ECF323B260568C1007EC2BB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5ECF323E260568C1007EC2BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5ECF3240260568C1007EC2BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CA198069719D9A81B48B9EF0 /* Pods_SkyEng.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SkyEng.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				58ACB34C32D9FD0CF7DF007E /* Pods_SkyEng.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +47,8 @@
 			children = (
 				5ECF3231260568C0007EC2BB /* SkyEng */,
 				5ECF3230260568C0007EC2BB /* Products */,
+				78A5A8835CEDF4A883F92494 /* Pods */,
+				E343E4D6321508B9DD37D549 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +74,24 @@
 			path = SkyEng;
 			sourceTree = "<group>";
 		};
+		78A5A8835CEDF4A883F92494 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3608BE322C995DA0D8F34629 /* Pods-SkyEng.debug.xcconfig */,
+				2EE98A0B616D059C12F745A0 /* Pods-SkyEng.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		E343E4D6321508B9DD37D549 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CA198069719D9A81B48B9EF0 /* Pods_SkyEng.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5ECF3243260568C1007EC2BB /* Build configuration list for PBXNativeTarget "SkyEng" */;
 			buildPhases = (
+				AC6E9F4E1E4AB0C8D786DBF2 /* [CP] Check Pods Manifest.lock */,
 				5ECF322B260568C0007EC2BB /* Sources */,
 				5ECF322C260568C0007EC2BB /* Frameworks */,
 				5ECF322D260568C0007EC2BB /* Resources */,
+				E101C05892A9332824D1325E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -131,6 +158,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		AC6E9F4E1E4AB0C8D786DBF2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SkyEng-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E101C05892A9332824D1325E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SkyEng/Pods-SkyEng-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SkyEng/Pods-SkyEng-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SkyEng/Pods-SkyEng-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5ECF322B260568C0007EC2BB /* Sources */ = {
@@ -283,6 +352,7 @@
 		};
 		5ECF3244260568C1007EC2BB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3608BE322C995DA0D8F34629 /* Pods-SkyEng.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -303,6 +373,7 @@
 		};
 		5ECF3245260568C1007EC2BB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2EE98A0B616D059C12F745A0 /* Pods-SkyEng.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

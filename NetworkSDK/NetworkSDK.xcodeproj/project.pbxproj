@@ -10,6 +10,7 @@
 		5ECF325D26056C8A007EC2BB /* NetworkSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5ECF325326056C89007EC2BB /* NetworkSDK.framework */; };
 		5ECF326226056C8A007EC2BB /* NetworkSDKTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECF326126056C8A007EC2BB /* NetworkSDKTests.swift */; };
 		5ECF326426056C8A007EC2BB /* NetworkSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = 5ECF325626056C89007EC2BB /* NetworkSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B64C81E18D5340D8EAC64FDB /* libPods-NetworkSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BE6BD26886485865F6A0ABE /* libPods-NetworkSDK.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -23,12 +24,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		005C2E42B98814B729AC565A /* Pods-NetworkSDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NetworkSDK.release.xcconfig"; path = "Target Support Files/Pods-NetworkSDK/Pods-NetworkSDK.release.xcconfig"; sourceTree = "<group>"; };
+		3BE6BD26886485865F6A0ABE /* libPods-NetworkSDK.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NetworkSDK.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5ECF325326056C89007EC2BB /* NetworkSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NetworkSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5ECF325626056C89007EC2BB /* NetworkSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkSDK.h; sourceTree = "<group>"; };
 		5ECF325726056C89007EC2BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5ECF325C26056C8A007EC2BB /* NetworkSDKTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NetworkSDKTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5ECF326126056C8A007EC2BB /* NetworkSDKTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkSDKTests.swift; sourceTree = "<group>"; };
 		5ECF326326056C8A007EC2BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C8CAD0B1E18161DC0BC1420B /* Pods-NetworkSDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NetworkSDK.debug.xcconfig"; path = "Target Support Files/Pods-NetworkSDK/Pods-NetworkSDK.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B64C81E18D5340D8EAC64FDB /* libPods-NetworkSDK.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,12 +55,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1E792067D1185E9EB09450BD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3BE6BD26886485865F6A0ABE /* libPods-NetworkSDK.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		5ECF324926056C89007EC2BB = {
 			isa = PBXGroup;
 			children = (
 				5ECF325526056C89007EC2BB /* NetworkSDK */,
 				5ECF326026056C8A007EC2BB /* NetworkSDKTests */,
 				5ECF325426056C89007EC2BB /* Products */,
+				6D2548DFAF4D119DD9822754 /* Pods */,
+				1E792067D1185E9EB09450BD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -86,6 +101,16 @@
 			path = NetworkSDKTests;
 			sourceTree = "<group>";
 		};
+		6D2548DFAF4D119DD9822754 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C8CAD0B1E18161DC0BC1420B /* Pods-NetworkSDK.debug.xcconfig */,
+				005C2E42B98814B729AC565A /* Pods-NetworkSDK.release.xcconfig */,
+			);
+			name = Pods;
+			path = ../SkyEng/Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -104,6 +129,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5ECF326726056C8A007EC2BB /* Build configuration list for PBXNativeTarget "NetworkSDK" */;
 			buildPhases = (
+				D060D884A3B7B5063D3990A3 /* [CP] Check Pods Manifest.lock */,
 				5ECF324E26056C89007EC2BB /* Headers */,
 				5ECF324F26056C89007EC2BB /* Sources */,
 				5ECF325026056C89007EC2BB /* Frameworks */,
@@ -188,6 +214,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		D060D884A3B7B5063D3990A3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NetworkSDK-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5ECF324F26056C89007EC2BB /* Sources */ = {
@@ -340,6 +391,7 @@
 		};
 		5ECF326826056C8A007EC2BB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C8CAD0B1E18161DC0BC1420B /* Pods-NetworkSDK.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -365,6 +417,7 @@
 		};
 		5ECF326926056C8A007EC2BB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 005C2E42B98814B729AC565A /* Pods-NetworkSDK.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;

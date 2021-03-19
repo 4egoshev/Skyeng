@@ -1,0 +1,29 @@
+# Uncomment the next line to define a global platform for your project
+
+platform :ios, '11.0'
+inhibit_all_warnings!
+
+workspace '../SkyEng.xcworkspace'
+
+def network
+  pod "Alamofire", '~> 5.1'
+end
+
+def pods
+  network
+end
+
+def network_sdk
+  podspec :path => '../NetworkSDK/NetworkSDK.podspec'
+end
+
+target 'SkyEng' do
+  use_frameworks!
+  pods
+end
+
+
+target 'NetworkSDK' do
+  project '../NetworkSDK/NetworkSDK.xcodeproj'
+  network_sdk
+end
