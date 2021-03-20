@@ -1,0 +1,26 @@
+//
+//  {{ module_info.file_name }}
+//  {{ module_info.project_name }}
+//
+//  Created by {{ developer.name }} on {{ date }}.
+//  Copyright © {{ year }} {{ developer.company }}. All rights reserved.
+//
+
+import Foundation
+
+class {{ module_info.name }}ViewModel: {{ module_info.prefix }}{{ module_info.name }}ViewModelProtocol {
+
+	let model: {{ module_info.name }}ModelProtocol
+
+    private let router: {{ module_info.name }}RouterProtocol
+	
+	init(model: {{ module_info.name }}ModelProtocol,
+		 router: {{ module_info.name }}RouterProtocol) {
+		self.model = model
+		self.router = router
+	}
+
+    func viewDidLoad() {
+
+    }
+}

@@ -1,0 +1,28 @@
+# Template information section
+name: "MVVMR"
+summary: "MVVM module template with Assembler & Router for SkyEnd"
+author: "Aleksandr Chegoshev"
+version: "0.1.0"
+license: "MIT"
+
+# The declarations for code files
+
+code_files:
+# View layer
+- {name: View/ViewController.swift, path: Code/View/view_controller.swift.liquid}
+
+# ViewModel layer
+- {name: ViewModel/ViewModelProtocol.swift, path: Code/ViewModel/view_model_protocol.swift.liquid}
+- {name: ViewModel/ViewModel.swift, path: Code/ViewModel/view_model.swift.liquid}
+
+# Model layer
+- {name: Model/ModelProtocol.swift, path: Code/Model/model_protocol.swift.liquid}
+- {name: Model/Model.swift, path: Code/Model/model.swift.liquid}
+
+# Assembler layer
+- {name: Assembler/AssemblyProtocol.swift, path: Code/Assembly/assembly_protocol.swift.liquid}
+- {name: Assembler/Assembly.swift, path: Code/Assembly/assembly.swift.liquid}
+
+# Router layer
+- {name: Router/RouterProtocol.swift, path: Code/Router/router_protocol.swift.liquid}
+- {name: Router/Router.swift, path: Code/Router/router.swift.liquid}

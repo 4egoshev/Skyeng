@@ -1,0 +1,27 @@
+//
+//  {{ module_info.file_name }}
+//  {{ module_info.project_name }}
+//
+//  Created by {{ developer.name }} on {{ date }}.
+//  Copyright © {{ year }} {{ developer.company }}. All rights reserved.
+//
+
+import Swinject
+
+class {{ prefix }}{{ module_info.name }}Assembly: {{ prefix }}{{ module_info.name }}AssemblyProtocol {
+
+	var resolver: Resolver
+    
+    init(resolver: Resolver) {
+        self.resolver = resolver
+    }
+
+	func make() -> {{ prefix }}{{ module_info.name }}ViewController {
+		let model = {{ prefix }}{{ module_info.name }}Model()
+		let router = {{ prefix }}{{ module_info.name }}Router()
+		let viewModel = {{ prefix }}{{ module_info.name }}ViewModel(model: model, router: router)
+		let controller = {{ prefix }}{{ module_info.name }}ViewController(viewModel: viewModel)
+		router.view = controller
+		return controller
+	}
+}
