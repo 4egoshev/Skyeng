@@ -5,17 +5,27 @@ inhibit_all_warnings!
 
 workspace '../SkyEng.xcworkspace'
 
-def network
-  pod "Alamofire", '~> 5.1'
-end
-
 def di
   pod 'Swinject', '~> 2.7.1'
 end 
 
+def ui
+  
+end
+
+def network
+  pod "Alamofire", '~> 5.1'
+end
+
+
 def pods
+  ui
   di
   network
+end
+
+def ui_components_sdk
+  podspec :path => '../UIComponentsSDK/UIComponentsSDK.podspec'
 end
 
 def network_sdk
@@ -27,6 +37,10 @@ target 'SkyEng' do
   pods
 end
 
+target 'UIComponentsSDK' do
+  project '../UIComponentsSDK/UIComponentsSDK.xcodeproj'
+  ui_components_sdk
+end
 
 target 'NetworkSDK' do
   project '../NetworkSDK/NetworkSDK.xcodeproj'

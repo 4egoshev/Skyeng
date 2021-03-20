@@ -5,6 +5,9 @@
       location = "group:SkyEng/SkyEng.xcodeproj">
    </FileRef>
    <FileRef
+      location = "group:UIComponentsSDK/UIComponentsSDK.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:NetworkSDK/NetworkSDK.xcodeproj">
    </FileRef>
    <FileRef

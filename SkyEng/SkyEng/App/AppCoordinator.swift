@@ -6,6 +6,7 @@
 //  Copyright © 2021 SkyEng. All rights reserved.
 //
 
+import UIComponentsSDK
 import Swinject
 
 protocol AppCoordinatorProtocol {

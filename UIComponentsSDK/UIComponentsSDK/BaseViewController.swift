@@ -1,16 +1,15 @@
 //
 //  BaseViewController.swift
-//  SkyEng
+//  UIComponentsSDK
 //
 //  Created by Александр Чегошев on 20.03.2021.
-//  Copyright © 2021 SkyEng. All rights reserved.
 //
 
 import UIKit
 
-class BaseViewController: UIViewController {
-
-    init() {
+public class BaseViewController: UIViewController {
+    
+    public init() {
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -18,11 +17,7 @@ class BaseViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override func viewDidLoad() {
+    public override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
     }
-
-
 }
-
