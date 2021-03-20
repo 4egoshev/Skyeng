@@ -13,6 +13,7 @@
 		5ECF323C260568C1007EC2BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5ECF323B260568C1007EC2BB /* Assets.xcassets */; };
 		5ECF323F260568C1007EC2BB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5ECF323D260568C1007EC2BB /* LaunchScreen.storyboard */; };
 		5EF3A3BD2605771A00B240EC /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF3A3BC2605771A00B240EC /* AppCoordinator.swift */; };
+		5EF3A3C9260578E100B240EC /* Assembler+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF3A3C8260578E100B240EC /* Assembler+Extention.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		5ECF323E260568C1007EC2BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5ECF3240260568C1007EC2BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5EF3A3BC2605771A00B240EC /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		5EF3A3C8260578E100B240EC /* Assembler+Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Assembler+Extention.swift"; sourceTree = "<group>"; };
 		CA198069719D9A81B48B9EF0 /* Pods_SkyEng.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SkyEng.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -61,9 +63,9 @@
 		5ECF3231260568C0007EC2BB /* SkyEng */ = {
 			isa = PBXGroup;
 			children = (
-				5ECF3232260568C0007EC2BB /* AppDelegate.swift */,
+				5EF3A3C3260578B800B240EC /* App */,
+				5EF3A3C5260578C300B240EC /* Assembly */,
 				5ECF3236260568C0007EC2BB /* ViewController.swift */,
-				5EF3A3BC2605771A00B240EC /* AppCoordinator.swift */,
 				5EF3A3C02605781E00B240EC /* Support Files */,
 			);
 			path = SkyEng;
@@ -77,6 +79,23 @@
 				5ECF3240260568C1007EC2BB /* Info.plist */,
 			);
 			path = "Support Files";
+			sourceTree = "<group>";
+		};
+		5EF3A3C3260578B800B240EC /* App */ = {
+			isa = PBXGroup;
+			children = (
+				5ECF3232260568C0007EC2BB /* AppDelegate.swift */,
+				5EF3A3BC2605771A00B240EC /* AppCoordinator.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		5EF3A3C5260578C300B240EC /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				5EF3A3C8260578E100B240EC /* Assembler+Extention.swift */,
+			);
+			path = Assembly;
 			sourceTree = "<group>";
 		};
 		78A5A8835CEDF4A883F92494 /* Pods */ = {
@@ -212,6 +231,7 @@
 				5EF3A3BD2605771A00B240EC /* AppCoordinator.swift in Sources */,
 				5ECF3237260568C0007EC2BB /* ViewController.swift in Sources */,
 				5ECF3233260568C0007EC2BB /* AppDelegate.swift in Sources */,
+				5EF3A3C9260578E100B240EC /* Assembler+Extention.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
