@@ -98,5 +98,6 @@ Pod::Spec.new do |spec|
   #  you can include multiple dependencies to ensure it works.
 
   spec.dependency "Alamofire", '~> 5.1'
+  spec.dependency "SwiftLint", '~> 0.43.1'
 
 end

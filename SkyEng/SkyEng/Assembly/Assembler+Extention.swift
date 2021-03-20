@@ -11,7 +11,7 @@ import Swinject
 extension Assembler {
     func registerAssemblies() {
         var assemblies = [Assembly]()
-        
+
         apply(assemblies: assemblies)
     }
 }

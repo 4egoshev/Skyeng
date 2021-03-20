@@ -14,16 +14,16 @@ protocol AppCoordinatorProtocol {
 }
 
 class AppCoordinator: AppCoordinatorProtocol {
-    
+
     private let assembler: Assembler
-    
+
     private let window: UIWindow?
-    
+
     init(window: UIWindow?) {
         self.window = window
         self.assembler = Assembler(container: Container())
     }
-    
+
     func start(with launchOptions: [UIApplication.LaunchOptionsKey: Any]?) {
         assembler.registerAssemblies()
         let controller = BaseViewController()

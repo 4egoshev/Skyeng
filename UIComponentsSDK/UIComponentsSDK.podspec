@@ -113,5 +113,6 @@ Pod::Spec.new do |spec|
   #  you can include multiple dependencies to ensure it works.
 
   spec.dependency "SnapKit", "~> 5.0.0"
+  spec.dependency "SwiftLint", '~> 0.43.1'
 
 end

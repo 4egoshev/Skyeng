@@ -5,6 +5,10 @@ inhibit_all_warnings!
 
 workspace '../SkyEng.xcworkspace'
 
+def script
+  pod 'SwiftLint', '~> 0.43.1'
+end
+
 def di
   pod 'Swinject', '~> 2.7.1'
 end 
@@ -19,6 +23,7 @@ end
 
 
 def pods
+  script
   ui
   di
   network
