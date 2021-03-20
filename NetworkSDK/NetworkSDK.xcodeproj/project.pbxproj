@@ -10,6 +10,9 @@
 		5ECF325D26056C8A007EC2BB /* NetworkSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5ECF325326056C89007EC2BB /* NetworkSDK.framework */; };
 		5ECF326226056C8A007EC2BB /* NetworkSDKTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECF326126056C8A007EC2BB /* NetworkSDKTests.swift */; };
 		5ECF326426056C8A007EC2BB /* NetworkSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = 5ECF325626056C89007EC2BB /* NetworkSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5EF3A39D260573BB00B240EC /* Networker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF3A39C260573BB00B240EC /* Networker.swift */; };
+		5EF3A3A1260573E000B240EC /* Interceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF3A3A0260573E000B240EC /* Interceptor.swift */; };
+		5EF3A3A52605740B00B240EC /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF3A3A42605740B00B240EC /* Logger.swift */; };
 		B64C81E18D5340D8EAC64FDB /* libPods-NetworkSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BE6BD26886485865F6A0ABE /* libPods-NetworkSDK.a */; };
 /* End PBXBuildFile section */
 
@@ -32,6 +35,9 @@
 		5ECF325C26056C8A007EC2BB /* NetworkSDKTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NetworkSDKTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5ECF326126056C8A007EC2BB /* NetworkSDKTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkSDKTests.swift; sourceTree = "<group>"; };
 		5ECF326326056C8A007EC2BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5EF3A39C260573BB00B240EC /* Networker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networker.swift; sourceTree = "<group>"; };
+		5EF3A3A0260573E000B240EC /* Interceptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interceptor.swift; sourceTree = "<group>"; };
+		5EF3A3A42605740B00B240EC /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		C8CAD0B1E18161DC0BC1420B /* Pods-NetworkSDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NetworkSDK.debug.xcconfig"; path = "Target Support Files/Pods-NetworkSDK/Pods-NetworkSDK.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -88,6 +94,7 @@
 			children = (
 				5ECF325626056C89007EC2BB /* NetworkSDK.h */,
 				5ECF325726056C89007EC2BB /* Info.plist */,
+				5EF3A39B2605738C00B240EC /* Network */,
 			);
 			path = NetworkSDK;
 			sourceTree = "<group>";
@@ -99,6 +106,16 @@
 				5ECF326326056C8A007EC2BB /* Info.plist */,
 			);
 			path = NetworkSDKTests;
+			sourceTree = "<group>";
+		};
+		5EF3A39B2605738C00B240EC /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				5EF3A39C260573BB00B240EC /* Networker.swift */,
+				5EF3A3A0260573E000B240EC /* Interceptor.swift */,
+				5EF3A3A42605740B00B240EC /* Logger.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 		6D2548DFAF4D119DD9822754 /* Pods */ = {
@@ -173,6 +190,7 @@
 				TargetAttributes = {
 					5ECF325226056C89007EC2BB = {
 						CreatedOnToolsVersion = 12.4;
+						LastSwiftMigration = 1240;
 					};
 					5ECF325B26056C8A007EC2BB = {
 						CreatedOnToolsVersion = 12.4;
@@ -245,6 +263,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5EF3A39D260573BB00B240EC /* Networker.swift in Sources */,
+				5EF3A3A52605740B00B240EC /* Logger.swift in Sources */,
+				5EF3A3A1260573E000B240EC /* Interceptor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -393,6 +414,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C8CAD0B1E18161DC0BC1420B /* Pods-NetworkSDK.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = V6C9FSMZ98;
@@ -410,6 +432,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Chegoshev.Aleksander.NetworkSDK;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -419,6 +442,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 005C2E42B98814B729AC565A /* Pods-NetworkSDK.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = V6C9FSMZ98;
@@ -444,6 +468,7 @@
 		5ECF326B26056C8A007EC2BB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = V6C9FSMZ98;
 				INFOPLIST_FILE = NetworkSDKTests/Info.plist;
@@ -462,6 +487,7 @@
 		5ECF326C26056C8A007EC2BB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = V6C9FSMZ98;
 				INFOPLIST_FILE = NetworkSDKTests/Info.plist;
