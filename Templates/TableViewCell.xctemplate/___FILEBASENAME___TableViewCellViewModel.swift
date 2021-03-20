@@ -14,7 +14,7 @@ public struct ___VARIABLE_productName:identifier___TableViewCellViewModel: ___VA
     
     public var configurator: TableViewCellConfigurable = ___VARIABLE_productName:identifier___TableViewCellConfigurator()
     
-    init() {
+    public init() {
         
     }
 }
