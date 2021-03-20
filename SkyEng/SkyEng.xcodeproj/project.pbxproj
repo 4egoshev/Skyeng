@@ -14,7 +14,18 @@
 		5ECF323F260568C1007EC2BB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5ECF323D260568C1007EC2BB /* LaunchScreen.storyboard */; };
 		5EF3A3BD2605771A00B240EC /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF3A3BC2605771A00B240EC /* AppCoordinator.swift */; };
 		5EF3A3C9260578E100B240EC /* Assembler+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF3A3C8260578E100B240EC /* Assembler+Extention.swift */; };
+		5EF3A3F626064BA900B240EC /* SkyEngUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF3A3F526064BA900B240EC /* SkyEngUnitTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5EF3A3F826064BA900B240EC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5ECF3227260568C0007EC2BB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5ECF322E260568C0007EC2BB;
+			remoteInfo = SkyEng;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		2EE98A0B616D059C12F745A0 /* Pods-SkyEng.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SkyEng.release.xcconfig"; path = "Target Support Files/Pods-SkyEng/Pods-SkyEng.release.xcconfig"; sourceTree = "<group>"; };
@@ -27,6 +38,9 @@
 		5ECF3240260568C1007EC2BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5EF3A3BC2605771A00B240EC /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		5EF3A3C8260578E100B240EC /* Assembler+Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Assembler+Extention.swift"; sourceTree = "<group>"; };
+		5EF3A3F326064BA900B240EC /* SkyEngUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SkyEngUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5EF3A3F526064BA900B240EC /* SkyEngUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkyEngUnitTests.swift; sourceTree = "<group>"; };
+		5EF3A3F726064BA900B240EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CA198069719D9A81B48B9EF0 /* Pods_SkyEng.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SkyEng.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -39,6 +53,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		5EF3A3F026064BA900B240EC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -46,6 +67,7 @@
 			isa = PBXGroup;
 			children = (
 				5ECF3231260568C0007EC2BB /* SkyEng */,
+				5EF3A3F426064BA900B240EC /* SkyEngUnitTests */,
 				5ECF3230260568C0007EC2BB /* Products */,
 				78A5A8835CEDF4A883F92494 /* Pods */,
 				E343E4D6321508B9DD37D549 /* Frameworks */,
@@ -56,6 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				5ECF322F260568C0007EC2BB /* SkyEng.app */,
+				5EF3A3F326064BA900B240EC /* SkyEngUnitTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -98,6 +121,15 @@
 			path = Assembly;
 			sourceTree = "<group>";
 		};
+		5EF3A3F426064BA900B240EC /* SkyEngUnitTests */ = {
+			isa = PBXGroup;
+			children = (
+				5EF3A3F526064BA900B240EC /* SkyEngUnitTests.swift */,
+				5EF3A3F726064BA900B240EC /* Info.plist */,
+			);
+			path = SkyEngUnitTests;
+			sourceTree = "<group>";
+		};
 		78A5A8835CEDF4A883F92494 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -137,6 +169,24 @@
 			productReference = 5ECF322F260568C0007EC2BB /* SkyEng.app */;
 			productType = "com.apple.product-type.application";
 		};
+		5EF3A3F226064BA900B240EC /* SkyEngUnitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5EF3A3FA26064BA900B240EC /* Build configuration list for PBXNativeTarget "SkyEngUnitTests" */;
+			buildPhases = (
+				5EF3A3EF26064BA900B240EC /* Sources */,
+				5EF3A3F026064BA900B240EC /* Frameworks */,
+				5EF3A3F126064BA900B240EC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5EF3A3F926064BA900B240EC /* PBXTargetDependency */,
+			);
+			name = SkyEngUnitTests;
+			productName = SkyEngUnitTests;
+			productReference = 5EF3A3F326064BA900B240EC /* SkyEngUnitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -148,6 +198,10 @@
 				TargetAttributes = {
 					5ECF322E260568C0007EC2BB = {
 						CreatedOnToolsVersion = 12.4;
+					};
+					5EF3A3F226064BA900B240EC = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 5ECF322E260568C0007EC2BB;
 					};
 				};
 			};
@@ -165,6 +219,7 @@
 			projectRoot = "";
 			targets = (
 				5ECF322E260568C0007EC2BB /* SkyEng */,
+				5EF3A3F226064BA900B240EC /* SkyEngUnitTests */,
 			);
 		};
 /* End PBXProject section */
@@ -176,6 +231,13 @@
 			files = (
 				5ECF323F260568C1007EC2BB /* LaunchScreen.storyboard in Resources */,
 				5ECF323C260568C1007EC2BB /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5EF3A3F126064BA900B240EC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -235,7 +297,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		5EF3A3EF26064BA900B240EC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5EF3A3F626064BA900B240EC /* SkyEngUnitTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5EF3A3F926064BA900B240EC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5ECF322E260568C0007EC2BB /* SkyEng */;
+			targetProxy = 5EF3A3F826064BA900B240EC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		5ECF323D260568C1007EC2BB /* LaunchScreen.storyboard */ = {
@@ -407,6 +485,48 @@
 			};
 			name = Release;
 		};
+		5EF3A3FB26064BA900B240EC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = V6C9FSMZ98;
+				INFOPLIST_FILE = SkyEngUnitTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Chegoshev.Aleksander.SkyEngUnitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SkyEng.app/SkyEng";
+			};
+			name = Debug;
+		};
+		5EF3A3FC26064BA900B240EC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = V6C9FSMZ98;
+				INFOPLIST_FILE = SkyEngUnitTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Chegoshev.Aleksander.SkyEngUnitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SkyEng.app/SkyEng";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -424,6 +544,15 @@
 			buildConfigurations = (
 				5ECF3244260568C1007EC2BB /* Debug */,
 				5ECF3245260568C1007EC2BB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5EF3A3FA26064BA900B240EC /* Build configuration list for PBXNativeTarget "SkyEngUnitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5EF3A3FB26064BA900B240EC /* Debug */,
+				5EF3A3FC26064BA900B240EC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
