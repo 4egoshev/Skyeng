@@ -21,7 +21,6 @@ def network
   pod "Alamofire", '~> 5.1'
 end
 
-
 def pods
   script
   ui

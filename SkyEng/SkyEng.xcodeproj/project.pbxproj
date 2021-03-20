@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0EC807E8075F48B2C297CB0B /* FeedRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD1167B22319EE69342158C /* FeedRouterProtocol.swift */; };
+		1BBE63F04F8557C954E7B388 /* FeedViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C91D0ACDB9BAFEB46BAF42 /* FeedViewModelProtocol.swift */; };
+		1DA33AB56F1DBF29B049B80F /* FeedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DD119BB2B3A2B36D8DF77C /* FeedModel.swift */; };
+		485251ED62FEFF2823FB9CD5 /* FeedAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842F92B9587D35DB06D6E6F2 /* FeedAssembly.swift */; };
+		575181168367C85C17CAF440 /* FeedAssemblyProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28BB1FF1984A25860BF3B04C /* FeedAssemblyProtocol.swift */; };
 		58ACB34C32D9FD0CF7DF007E /* Pods_SkyEng.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA198069719D9A81B48B9EF0 /* Pods_SkyEng.framework */; };
 		5E85326826064EF5000658F2 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E85326726064EF5000658F2 /* Router.swift */; };
 		5E8533F226065B66000658F2 /* UIComponentsSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E8533F126065B66000658F2 /* UIComponentsSDK.framework */; };
@@ -21,6 +26,10 @@
 		5EF3A3BD2605771A00B240EC /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF3A3BC2605771A00B240EC /* AppCoordinator.swift */; };
 		5EF3A3C9260578E100B240EC /* Assembler+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF3A3C8260578E100B240EC /* Assembler+Extention.swift */; };
 		5EF3A3F626064BA900B240EC /* SkyEngUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF3A3F526064BA900B240EC /* SkyEngUnitTests.swift */; };
+		85E69D38CD6F7DD50A4CE31F /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359A4F20A061A9CDCB222E1F /* FeedViewController.swift */; };
+		91C2444AF6E925E275AD80DC /* FeedRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D9590432A2632EAE53836B5 /* FeedRouter.swift */; };
+		D29655FFF3E556DF882A58F0 /* FeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8335D6CC728C826319F09DA /* FeedViewModel.swift */; };
+		F071481ABEF747B978B82E26 /* FeedModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5D963E7CC96601B765B5E5A /* FeedModelProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,7 +58,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0D9590432A2632EAE53836B5 /* FeedRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FeedRouter.swift; sourceTree = "<group>"; };
+		28BB1FF1984A25860BF3B04C /* FeedAssemblyProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FeedAssemblyProtocol.swift; sourceTree = "<group>"; };
 		2EE98A0B616D059C12F745A0 /* Pods-SkyEng.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SkyEng.release.xcconfig"; path = "Target Support Files/Pods-SkyEng/Pods-SkyEng.release.xcconfig"; sourceTree = "<group>"; };
+		359A4F20A061A9CDCB222E1F /* FeedViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		3608BE322C995DA0D8F34629 /* Pods-SkyEng.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SkyEng.debug.xcconfig"; path = "Target Support Files/Pods-SkyEng/Pods-SkyEng.debug.xcconfig"; sourceTree = "<group>"; };
 		5E85326726064EF5000658F2 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		5E85334226065458000658F2 /* UIComponentsSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = UIComponentsSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -70,7 +82,13 @@
 		5EF3A3F326064BA900B240EC /* SkyEngUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SkyEngUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EF3A3F526064BA900B240EC /* SkyEngUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkyEngUnitTests.swift; sourceTree = "<group>"; };
 		5EF3A3F726064BA900B240EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../../SkyEngUnitTests/Info.plist; sourceTree = "<group>"; };
+		60C91D0ACDB9BAFEB46BAF42 /* FeedViewModelProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FeedViewModelProtocol.swift; sourceTree = "<group>"; };
+		83DD119BB2B3A2B36D8DF77C /* FeedModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FeedModel.swift; sourceTree = "<group>"; };
+		842F92B9587D35DB06D6E6F2 /* FeedAssembly.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FeedAssembly.swift; sourceTree = "<group>"; };
+		C5D963E7CC96601B765B5E5A /* FeedModelProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FeedModelProtocol.swift; sourceTree = "<group>"; };
 		CA198069719D9A81B48B9EF0 /* Pods_SkyEng.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SkyEng.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CBD1167B22319EE69342158C /* FeedRouterProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FeedRouterProtocol.swift; sourceTree = "<group>"; };
+		D8335D6CC728C826319F09DA /* FeedViewModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FeedViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +112,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		07A95B3FA101B9438EDDD038 /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+				D624A06170115E97EA4B300F /* View */,
+				4E1A30BE21055FEED266451D /* ViewModel */,
+				8AC99306EF25B16CD1229226 /* Model */,
+				91A5831567A2BAA040552754 /* Assembler */,
+				78DAF16AB60D3ED79DDD2C3C /* Router */,
+			);
+			path = Feed;
+			sourceTree = "<group>";
+		};
+		4E1A30BE21055FEED266451D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				60C91D0ACDB9BAFEB46BAF42 /* FeedViewModelProtocol.swift */,
+				D8335D6CC728C826319F09DA /* FeedViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		5E85326626064EEF000658F2 /* Router */ = {
 			isa = PBXGroup;
 			children = (
@@ -127,6 +166,7 @@
 			children = (
 				5EF3A3C3260578B800B240EC /* App */,
 				5EF3A3C5260578C300B240EC /* Assembly */,
+				7FC831BBFF9C96B52F5590CA /* Modules */,
 				5E85326626064EEF000658F2 /* Router */,
 				5EF3A3C02605781E00B240EC /* Support Files */,
 			);
@@ -178,6 +218,49 @@
 				2EE98A0B616D059C12F745A0 /* Pods-SkyEng.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		78DAF16AB60D3ED79DDD2C3C /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				CBD1167B22319EE69342158C /* FeedRouterProtocol.swift */,
+				0D9590432A2632EAE53836B5 /* FeedRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		7FC831BBFF9C96B52F5590CA /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				07A95B3FA101B9438EDDD038 /* Feed */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		8AC99306EF25B16CD1229226 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C5D963E7CC96601B765B5E5A /* FeedModelProtocol.swift */,
+				83DD119BB2B3A2B36D8DF77C /* FeedModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		91A5831567A2BAA040552754 /* Assembler */ = {
+			isa = PBXGroup;
+			children = (
+				28BB1FF1984A25860BF3B04C /* FeedAssemblyProtocol.swift */,
+				842F92B9587D35DB06D6E6F2 /* FeedAssembly.swift */,
+			);
+			path = Assembler;
+			sourceTree = "<group>";
+		};
+		D624A06170115E97EA4B300F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				359A4F20A061A9CDCB222E1F /* FeedViewController.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		E343E4D6321508B9DD37D549 /* Frameworks */ = {
@@ -364,6 +447,15 @@
 				5E86F6B72606B1AD00E27727 /* ServiceAssembly.swift in Sources */,
 				5E85326826064EF5000658F2 /* Router.swift in Sources */,
 				5E86F6B42606B19300E27727 /* ModuleAssembly.swift in Sources */,
+				85E69D38CD6F7DD50A4CE31F /* FeedViewController.swift in Sources */,
+				1BBE63F04F8557C954E7B388 /* FeedViewModelProtocol.swift in Sources */,
+				D29655FFF3E556DF882A58F0 /* FeedViewModel.swift in Sources */,
+				F071481ABEF747B978B82E26 /* FeedModelProtocol.swift in Sources */,
+				1DA33AB56F1DBF29B049B80F /* FeedModel.swift in Sources */,
+				575181168367C85C17CAF440 /* FeedAssemblyProtocol.swift in Sources */,
+				485251ED62FEFF2823FB9CD5 /* FeedAssembly.swift in Sources */,
+				0EC807E8075F48B2C297CB0B /* FeedRouterProtocol.swift in Sources */,
+				91C2444AF6E925E275AD80DC /* FeedRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

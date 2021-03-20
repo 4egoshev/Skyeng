@@ -11,6 +11,8 @@ import Swinject
 class ModuleAssembly: Assembly {
 
     func assemble(container: Container) {
-
+        container.register(FeedAssemblyProtocol.self) { resolver in
+            return FeedAssembly(resolver: resolver)
+        }
     }
 }
