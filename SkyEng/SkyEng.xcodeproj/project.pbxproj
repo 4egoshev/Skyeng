@@ -11,6 +11,8 @@
 		5E85326826064EF5000658F2 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E85326726064EF5000658F2 /* Router.swift */; };
 		5E8533F226065B66000658F2 /* UIComponentsSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E8533F126065B66000658F2 /* UIComponentsSDK.framework */; };
 		5E8533F326065B66000658F2 /* UIComponentsSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5E8533F126065B66000658F2 /* UIComponentsSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5E853560260699D1000658F2 /* NetworkSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E85355F260699D1000658F2 /* NetworkSDK.framework */; };
+		5E853561260699D1000658F2 /* NetworkSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5E85355F260699D1000658F2 /* NetworkSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		5ECF3233260568C0007EC2BB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECF3232260568C0007EC2BB /* AppDelegate.swift */; };
 		5ECF323C260568C1007EC2BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5ECF323B260568C1007EC2BB /* Assets.xcassets */; };
 		5ECF323F260568C1007EC2BB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5ECF323D260568C1007EC2BB /* LaunchScreen.storyboard */; };
@@ -36,6 +38,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				5E853561260699D1000658F2 /* NetworkSDK.framework in Embed Frameworks */,
 				5E8533F326065B66000658F2 /* UIComponentsSDK.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -52,6 +55,7 @@
 		5E853387260657C9000658F2 /* UIComponentsSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = UIComponentsSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E8533B3260658A0000658F2 /* UIComponentsSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = UIComponentsSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E8533F126065B66000658F2 /* UIComponentsSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = UIComponentsSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5E85355F260699D1000658F2 /* NetworkSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = NetworkSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5ECF322F260568C0007EC2BB /* SkyEng.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SkyEng.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5ECF3232260568C0007EC2BB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5ECF323B260568C1007EC2BB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -71,6 +75,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				58ACB34C32D9FD0CF7DF007E /* Pods_SkyEng.framework in Frameworks */,
+				5E853560260699D1000658F2 /* NetworkSDK.framework in Frameworks */,
 				5E8533F226065B66000658F2 /* UIComponentsSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -172,6 +177,7 @@
 		E343E4D6321508B9DD37D549 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5E85355F260699D1000658F2 /* NetworkSDK.framework */,
 				5E8533F126065B66000658F2 /* UIComponentsSDK.framework */,
 				5E8533B3260658A0000658F2 /* UIComponentsSDK.framework */,
 				5E853387260657C9000658F2 /* UIComponentsSDK.framework */,

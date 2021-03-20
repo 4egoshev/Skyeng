@@ -8,7 +8,7 @@
 
 import UIKit
 
-public struct TableViewCellConfigurator<CellType: ConfigurableCell, ViewModel>: TableViewCellConfigurable where CellType.ViewModel == ViewModel, CellType: UITableViewCell {
+public struct TableViewCellConfigurator<CellType: CellConfigurable, ViewModel>: TableViewCellConfigurable where CellType.ViewModel == ViewModel, CellType: UITableViewCell {
 
     public var reuseId: String {
         String(describing: CellType.self)

@@ -11,7 +11,7 @@
 		5E8533272606532E000658F2 /* UIComponentsSDKTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8533262606532E000658F2 /* UIComponentsSDKTests.swift */; };
 		5E8533292606532E000658F2 /* UIComponentsSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = 5E85331B2606532E000658F2 /* UIComponentsSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5E85334C260654A4000658F2 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E85334B260654A4000658F2 /* BaseViewController.swift */; };
-		5E8534CB26066D01000658F2 /* ConfigurableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8534CA26066D01000658F2 /* ConfigurableCell.swift */; };
+		5E8534CB26066D01000658F2 /* CellConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8534CA26066D01000658F2 /* CellConfigurable.swift */; };
 		5E8534D226066D45000658F2 /* CollectionViewDataDisplayManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8534D126066D45000658F2 /* CollectionViewDataDisplayManager.swift */; };
 		5E8534D826066D5E000658F2 /* CollectionViewCellConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8534D726066D5E000658F2 /* CollectionViewCellConfigurator.swift */; };
 		5E8534DC26066D89000658F2 /* CollectionViewCellViewModelConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8534DB26066D89000658F2 /* CollectionViewCellViewModelConfigurable.swift */; };
@@ -47,7 +47,7 @@
 		5E8533262606532E000658F2 /* UIComponentsSDKTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIComponentsSDKTests.swift; sourceTree = "<group>"; };
 		5E8533282606532E000658F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5E85334B260654A4000658F2 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
-		5E8534CA26066D01000658F2 /* ConfigurableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurableCell.swift; sourceTree = "<group>"; };
+		5E8534CA26066D01000658F2 /* CellConfigurable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellConfigurable.swift; sourceTree = "<group>"; };
 		5E8534D126066D45000658F2 /* CollectionViewDataDisplayManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewDataDisplayManager.swift; sourceTree = "<group>"; };
 		5E8534D726066D5E000658F2 /* CollectionViewCellConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCellConfigurator.swift; sourceTree = "<group>"; };
 		5E8534DB26066D89000658F2 /* CollectionViewCellViewModelConfigurable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCellViewModelConfigurable.swift; sourceTree = "<group>"; };
@@ -126,6 +126,8 @@
 				5E85352B260671BD000658F2 /* Extensions */,
 				5E8535232606710C000658F2 /* Base */,
 				5E8534C926066CE3000658F2 /* DDM */,
+				5E86F6892606AFF700E27727 /* CollectionView */,
+				5E86F6882606AFE900E27727 /* TableView */,
 				5E8535262606711B000658F2 /* Support Files */,
 			);
 			path = UIComponentsSDK;
@@ -143,7 +145,7 @@
 		5E8534C926066CE3000658F2 /* DDM */ = {
 			isa = PBXGroup;
 			children = (
-				5E8534CA26066D01000658F2 /* ConfigurableCell.swift */,
+				5E8534CA26066D01000658F2 /* CellConfigurable.swift */,
 				5E8534EE26066DFC000658F2 /* TableViewDDM */,
 				5E8534D026066D36000658F2 /* CollectionViewDDM */,
 			);
@@ -204,6 +206,36 @@
 				5E85353E26067796000658F2 /* ClassNameProtocol.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		5E86F6882606AFE900E27727 /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				5E86F68A2606B00700E27727 /* Cell */,
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
+		5E86F6892606AFF700E27727 /* CollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				5E86F6982606B08000E27727 /* Cell */,
+			);
+			path = CollectionView;
+			sourceTree = "<group>";
+		};
+		5E86F68A2606B00700E27727 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
+		5E86F6982606B08000E27727 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -343,7 +375,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5E853538260673C5000658F2 /* UICollectionView+Extensions.swift in Sources */,
-				5E8534CB26066D01000658F2 /* ConfigurableCell.swift in Sources */,
+				5E8534CB26066D01000658F2 /* CellConfigurable.swift in Sources */,
 				5E85351426066FAF000658F2 /* TableViewCellConfigurable.swift in Sources */,
 				5E85353F26067796000658F2 /* ClassNameProtocol.swift in Sources */,
 				5E85350C26066F8B000658F2 /* TableCellConfigurator.swift in Sources */,

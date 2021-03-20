@@ -19,7 +19,7 @@ public protocol CollectionViewCellViewModelConfigurable {
 
 public extension CollectionViewCellViewModelConfigurable {
     
-    func dequeueCell(collectionView: UICollectionView, indexPath: IndexPath) -> UICollectionViewCell? {
+    func dequeueCell(collectionView: UICollectionView, indexPath: IndexPath) -> UICollectionViewCell {
         configurator.configure(cell: collectionView, indexPath: indexPath, viewModel: self)
     }
     

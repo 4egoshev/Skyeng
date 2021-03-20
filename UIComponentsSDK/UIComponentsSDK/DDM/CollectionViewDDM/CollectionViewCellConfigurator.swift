@@ -8,7 +8,7 @@
 
 import UIKit
 
-public struct CollectionViewCellConfigurator<CellType: ConfigurableCell, ViewModel>: CollectionViewCellConfigurable where CellType.ViewModel == ViewModel, CellType: UICollectionViewCell {
+public struct CollectionViewCellConfigurator<CellType: CellConfigurable, ViewModel>: CollectionViewCellConfigurable where CellType.ViewModel == ViewModel, CellType: UICollectionViewCell {
 
     public var reuseId: String {
         String(describing: CellType.self)

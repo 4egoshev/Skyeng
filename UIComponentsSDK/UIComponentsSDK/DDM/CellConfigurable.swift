@@ -1,5 +1,5 @@
 //
-//  ConfigurableCell.swift
+//  CellConfigurable.swift
 //  UIComponentsSDK
 //
 //  Created by Александр Чегошев on 21.03.2021.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-public protocol ConfigurableCell {
+public protocol CellConfigurable {
 
     associatedtype ViewModel
 
@@ -19,9 +19,9 @@ public protocol ConfigurableCell {
     func setupUI()
 
     mutating func configureCell(_ viewModel: ViewModel?)
-
 }
-public extension ConfigurableCell {
+
+public extension CellConfigurable {
     mutating func configureCell(_ viewModel: ViewModel?) {
         self.viewModel = viewModel
         self.bindUI()

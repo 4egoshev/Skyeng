@@ -17,7 +17,7 @@ public protocol TableViewCellViewModelConfigurable {
 
 public extension TableViewCellViewModelConfigurable {
     
-    func dequeueCell(tableView: UITableView) -> UITableViewCell? {
+    func dequeueCell(tableView: UITableView) -> UITableViewCell {
         configurator.configure(cell: tableView, viewModel: self)
     }
 }
