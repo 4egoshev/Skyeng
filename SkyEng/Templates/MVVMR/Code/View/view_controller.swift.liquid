@@ -6,7 +6,7 @@
 //  Copyright © {{ year }} {{ developer.company }}. All rights reserved.
 //
 
-import UIKit
+import UIComponentsSDK
 
 class {{ module_info.name }}ViewController: BaseViewController {
 
@@ -23,22 +23,19 @@ class {{ module_info.name }}ViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-		bindUI()
-		setupUI()
 		viewModel.viewDidLoad()
     }
-}
-
-//MARK: Bind
-private extension {{ module_info.name }}ViewController {
-	func bindUI() {
 	
+	override func bindUI() {
+		
+	}
+    
+	override func setupUI() {
+		  
 	}
 }
 
 //MARK: Setup
 private extension {{ module_info.name }}ViewController {
-	func setupUI() {
-		
-	}
+
 }

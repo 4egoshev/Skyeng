@@ -10,7 +10,7 @@ def di
 end 
 
 def ui
-  
+  pod 'SnapKit', '~> 5.0.0'
 end
 
 def network
