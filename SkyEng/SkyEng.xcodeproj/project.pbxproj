@@ -195,6 +195,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 1240;
 				LastUpgradeCheck = 1240;
+				ORGANIZATIONNAME = SkyEng;
 				TargetAttributes = {
 					5ECF322E260568C0007EC2BB = {
 						CreatedOnToolsVersion = 12.4;
