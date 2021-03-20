@@ -6,13 +6,13 @@
 //  Copyright © {{ year }} {{ developer.company }}. All rights reserved.
 //
 
-import UIKit
+import Swinject
 
 class {{ module_info.name }}Router: {{ module_info.name }}RouterProtocol {
 
 	weak var view: UIViewController?
 	
-	var resolver: Resolver
+	private let resolver: Resolver
     
     init(resolver: Resolver) {
         self.resolver = resolver

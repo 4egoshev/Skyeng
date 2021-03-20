@@ -25,7 +25,7 @@ class AppCoordinator: AppCoordinatorProtocol {
     
     func start(with launchOptions: [UIApplication.LaunchOptionsKey: Any]?) {
         assembler.registerAssemblies()
-        let controller = ViewController()
+        let controller = BaseViewController()
         window?.rootViewController = controller
         window?.makeKeyAndVisible()
     }
