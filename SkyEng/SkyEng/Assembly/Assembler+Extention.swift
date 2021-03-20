@@ -11,7 +11,21 @@ import Swinject
 extension Assembler {
     func registerAssemblies() {
         var assemblies = [Assembly]()
+        assemblies.append(contentsOf: serviceAssemblies)
+        assemblies.append(contentsOf: moduleAssemblies)
 
         apply(assemblies: assemblies)
+    }
+
+    private var serviceAssemblies: [Assembly] {
+        [
+            ServiceAssembly()
+        ]
+    }
+
+    private var moduleAssemblies: [Assembly] {
+        [
+            ModuleAssembly()
+        ]
     }
 }

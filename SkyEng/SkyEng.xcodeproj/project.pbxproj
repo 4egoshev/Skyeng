@@ -13,6 +13,8 @@
 		5E8533F326065B66000658F2 /* UIComponentsSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5E8533F126065B66000658F2 /* UIComponentsSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		5E853560260699D1000658F2 /* NetworkSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E85355F260699D1000658F2 /* NetworkSDK.framework */; };
 		5E853561260699D1000658F2 /* NetworkSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5E85355F260699D1000658F2 /* NetworkSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5E86F6B42606B19300E27727 /* ModuleAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E86F6B32606B19300E27727 /* ModuleAssembly.swift */; };
+		5E86F6B72606B1AD00E27727 /* ServiceAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E86F6B62606B1AD00E27727 /* ServiceAssembly.swift */; };
 		5ECF3233260568C0007EC2BB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECF3232260568C0007EC2BB /* AppDelegate.swift */; };
 		5ECF323C260568C1007EC2BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5ECF323B260568C1007EC2BB /* Assets.xcassets */; };
 		5ECF323F260568C1007EC2BB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5ECF323D260568C1007EC2BB /* LaunchScreen.storyboard */; };
@@ -56,6 +58,8 @@
 		5E8533B3260658A0000658F2 /* UIComponentsSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = UIComponentsSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E8533F126065B66000658F2 /* UIComponentsSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = UIComponentsSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E85355F260699D1000658F2 /* NetworkSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = NetworkSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5E86F6B32606B19300E27727 /* ModuleAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleAssembly.swift; sourceTree = "<group>"; };
+		5E86F6B62606B1AD00E27727 /* ServiceAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceAssembly.swift; sourceTree = "<group>"; };
 		5ECF322F260568C0007EC2BB /* SkyEng.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SkyEng.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5ECF3232260568C0007EC2BB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5ECF323B260568C1007EC2BB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -153,6 +157,8 @@
 			isa = PBXGroup;
 			children = (
 				5EF3A3C8260578E100B240EC /* Assembler+Extention.swift */,
+				5E86F6B62606B1AD00E27727 /* ServiceAssembly.swift */,
+				5E86F6B32606B19300E27727 /* ModuleAssembly.swift */,
 			);
 			path = Assembly;
 			sourceTree = "<group>";
@@ -355,7 +361,9 @@
 				5EF3A3BD2605771A00B240EC /* AppCoordinator.swift in Sources */,
 				5ECF3233260568C0007EC2BB /* AppDelegate.swift in Sources */,
 				5EF3A3C9260578E100B240EC /* Assembler+Extention.swift in Sources */,
+				5E86F6B72606B1AD00E27727 /* ServiceAssembly.swift in Sources */,
 				5E85326826064EF5000658F2 /* Router.swift in Sources */,
+				5E86F6B42606B19300E27727 /* ModuleAssembly.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
