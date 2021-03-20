@@ -15,8 +15,8 @@ public struct TableViewCellConfigurator<CellType: ConfigurableCell, ViewModel>: 
     }
 
     public func configure(cell tableView: UITableView, viewModel: TableViewCellViewModelConfigurable) -> UITableViewCell {
-        var cell = tableView.dequeueReusableCell(withIdentifier: reuseId) as? CellType
-        cell?.configureCell(viewModel as? ViewModel)
-        return cell ?? UITableViewCell()
+        var cell = tableView.dequeueCell(with: CellType.self)
+        cell.configureCell(viewModel as? ViewModel)
+        return cell
     }
 }

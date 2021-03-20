@@ -15,9 +15,9 @@ public struct CollectionViewCellConfigurator<CellType: ConfigurableCell, ViewMod
     }
 
     public func configure(cell collectionView: UICollectionView, indexPath: IndexPath, viewModel: CollectionViewCellViewModelConfigurable) -> UICollectionViewCell {
-        var cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseId, for: indexPath) as? CellType
-        cell?.configureCell(viewModel as? ViewModel)
-        return cell ?? UICollectionViewCell()
+        var cell = collectionView.dequeueCell(with: CellType.self, for: indexPath)
+        cell.configureCell(viewModel as? ViewModel)
+        return cell
     }
 }
 

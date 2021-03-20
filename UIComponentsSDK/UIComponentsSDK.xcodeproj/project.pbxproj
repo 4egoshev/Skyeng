@@ -20,6 +20,9 @@
 		5E85351026066FA0000658F2 /* TableViewCellViewModelConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E85350F26066FA0000658F2 /* TableViewCellViewModelConfigurable.swift */; };
 		5E85351426066FAF000658F2 /* TableViewCellConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E85351326066FAF000658F2 /* TableViewCellConfigurable.swift */; };
 		5E85351C26067024000658F2 /* CollectionViewCellConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E85351B26067024000658F2 /* CollectionViewCellConfigurable.swift */; };
+		5E85352D260671D8000658F2 /* UITableView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E85352C260671D8000658F2 /* UITableView+Extensions.swift */; };
+		5E853538260673C5000658F2 /* UICollectionView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E853537260673C5000658F2 /* UICollectionView+Extensions.swift */; };
+		5E85353F26067796000658F2 /* ClassNameProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E85353E26067796000658F2 /* ClassNameProtocol.swift */; };
 		DA2132BBC52FF12D35623415 /* libPods-UIComponentsSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 170D9A4A214B5576D543AC93 /* libPods-UIComponentsSDK.a */; };
 /* End PBXBuildFile section */
 
@@ -53,6 +56,9 @@
 		5E85350F26066FA0000658F2 /* TableViewCellViewModelConfigurable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellViewModelConfigurable.swift; sourceTree = "<group>"; };
 		5E85351326066FAF000658F2 /* TableViewCellConfigurable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellConfigurable.swift; sourceTree = "<group>"; };
 		5E85351B26067024000658F2 /* CollectionViewCellConfigurable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCellConfigurable.swift; sourceTree = "<group>"; };
+		5E85352C260671D8000658F2 /* UITableView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extensions.swift"; sourceTree = "<group>"; };
+		5E853537260673C5000658F2 /* UICollectionView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extensions.swift"; sourceTree = "<group>"; };
+		5E85353E26067796000658F2 /* ClassNameProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassNameProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,10 +122,11 @@
 		5E85331A2606532E000658F2 /* UIComponentsSDK */ = {
 			isa = PBXGroup;
 			children = (
+				5E85353D2606778A000658F2 /* Protocols */,
+				5E85352B260671BD000658F2 /* Extensions */,
+				5E8535232606710C000658F2 /* Base */,
 				5E8534C926066CE3000658F2 /* DDM */,
-				5E85331B2606532E000658F2 /* UIComponentsSDK.h */,
-				5E85331C2606532E000658F2 /* Info.plist */,
-				5E85334B260654A4000658F2 /* BaseViewController.swift */,
+				5E8535262606711B000658F2 /* Support Files */,
 			);
 			path = UIComponentsSDK;
 			sourceTree = "<group>";
@@ -136,8 +143,8 @@
 		5E8534C926066CE3000658F2 /* DDM */ = {
 			isa = PBXGroup;
 			children = (
-				5E8534EE26066DFC000658F2 /* TableViewDDM */,
 				5E8534CA26066D01000658F2 /* ConfigurableCell.swift */,
+				5E8534EE26066DFC000658F2 /* TableViewDDM */,
 				5E8534D026066D36000658F2 /* CollectionViewDDM */,
 			);
 			path = DDM;
@@ -163,6 +170,40 @@
 				5E85350F26066FA0000658F2 /* TableViewCellViewModelConfigurable.swift */,
 			);
 			path = TableViewDDM;
+			sourceTree = "<group>";
+		};
+		5E8535232606710C000658F2 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				5E85334B260654A4000658F2 /* BaseViewController.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		5E8535262606711B000658F2 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				5E85331B2606532E000658F2 /* UIComponentsSDK.h */,
+				5E85331C2606532E000658F2 /* Info.plist */,
+			);
+			path = "Support Files";
+			sourceTree = "<group>";
+		};
+		5E85352B260671BD000658F2 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				5E85352C260671D8000658F2 /* UITableView+Extensions.swift */,
+				5E853537260673C5000658F2 /* UICollectionView+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		5E85353D2606778A000658F2 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				5E85353E26067796000658F2 /* ClassNameProtocol.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -301,8 +342,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E853538260673C5000658F2 /* UICollectionView+Extensions.swift in Sources */,
 				5E8534CB26066D01000658F2 /* ConfigurableCell.swift in Sources */,
 				5E85351426066FAF000658F2 /* TableViewCellConfigurable.swift in Sources */,
+				5E85353F26067796000658F2 /* ClassNameProtocol.swift in Sources */,
 				5E85350C26066F8B000658F2 /* TableCellConfigurator.swift in Sources */,
 				5E8534DC26066D89000658F2 /* CollectionViewCellViewModelConfigurable.swift in Sources */,
 				5E85351026066FA0000658F2 /* TableViewCellViewModelConfigurable.swift in Sources */,
@@ -310,6 +353,7 @@
 				5E8534D826066D5E000658F2 /* CollectionViewCellConfigurator.swift in Sources */,
 				5E8534D226066D45000658F2 /* CollectionViewDataDisplayManager.swift in Sources */,
 				5E85334C260654A4000658F2 /* BaseViewController.swift in Sources */,
+				5E85352D260671D8000658F2 /* UITableView+Extensions.swift in Sources */,
 				5E85351C26067024000658F2 /* CollectionViewCellConfigurable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -466,7 +510,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = UIComponentsSDK/Info.plist;
+				INFOPLIST_FILE = "UIComponentsSDK/Support Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -494,7 +538,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = UIComponentsSDK/Info.plist;
+				INFOPLIST_FILE = "UIComponentsSDK/Support Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (

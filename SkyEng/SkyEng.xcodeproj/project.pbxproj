@@ -116,9 +116,9 @@
 		5ECF3231260568C0007EC2BB /* SkyEng */ = {
 			isa = PBXGroup;
 			children = (
-				5E85326626064EEF000658F2 /* Router */,
 				5EF3A3C3260578B800B240EC /* App */,
 				5EF3A3C5260578C300B240EC /* Assembly */,
+				5E85326626064EEF000658F2 /* Router */,
 				5EF3A3C02605781E00B240EC /* Support Files */,
 			);
 			path = SkyEng;
