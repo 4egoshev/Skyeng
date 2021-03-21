@@ -17,7 +17,29 @@ class FeedViewController: BaseViewController {
         let tableView = UITableView()
         tableView.dataSource = self
         tableView.delegate = self
+        tableView.separatorStyle = .none
+        tableView.backgroundColor = .white
+
+        tableView.tableHeaderView = searchController.searchBar
+
         return tableView
+    }()
+
+    private lazy var searchController: UISearchController = {
+        let controller = UISearchController(searchResultsController: nil)
+        controller.searchResultsUpdater = self
+        controller.dimsBackgroundDuringPresentation = false
+        controller.searchBar.sizeToFit()
+        controller.searchBar.barStyle = .default
+
+        // TODO: убрать
+        var frame = UIApplication.shared.statusBarFrame
+        frame = CGRect(x: 0, y: 0, width: frame.width, height: frame.height)
+        let statusBarView = UIView(frame: frame)
+        statusBarView.backgroundColor = .white
+        controller.view.addSubview(statusBarView)
+
+        return controller
     }()
 
     private var viewModel: FeedViewModelProtocol
@@ -45,6 +67,8 @@ class FeedViewController: BaseViewController {
 	}
 
 	override func setupUI() {
+        definesPresentationContext = true
+        extendedLayoutIncludesOpaqueBars = true
         view.backgroundColor = .white
         setupTableView()
 	}
@@ -82,5 +106,12 @@ extension FeedViewController: UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         viewModel.headers[section].height
+    }
+}
+
+// MARK: UISearchResultsUpdating
+extension FeedViewController: UISearchResultsUpdating {
+    func updateSearchResults(for searchController: UISearchController) {
+        viewModel.searchtext = searchController.searchBar.text
     }
 }

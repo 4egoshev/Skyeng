@@ -15,6 +15,13 @@ class FeedViewModel: FeedViewModelProtocol {
     var reloadData: Signal<(), Never>
     private var reloadDataObserver: Signal<(), Never>.Observer
 
+    var searchtext: String? {
+        didSet {
+            print("searchtext = \(searchtext)")
+            getSearch(text: searchtext ?? "")
+        }
+    }
+
     var headers: [TableReusableViewModelConfigurable] = []
 
     var dataSource: [[TableViewCellViewModelConfigurable]] = []
@@ -35,7 +42,11 @@ class FeedViewModel: FeedViewModelProtocol {
 
     func viewDidLoad() {
         bind()
-        model.getSearch(text: "test", page: 0, pageSize: 15)
+        getSearch()
+    }
+
+    private func getSearch(text: String = "", page: Int = 0, pageSize: Int = 15) {
+        model.getSearch(text: text, page: 0, pageSize: 15)
     }
 }
 
@@ -60,6 +71,8 @@ private extension FeedViewModel {
 // MARK: Setup
 private extension FeedViewModel {
     func setupDataSource(with words: [Word]) {
+        headers.removeAll()
+        dataSource.removeAll()
         headers = words.map {
 //                self.dataSource.append([SpacingTableViewCellViewModel()])
 
@@ -70,7 +83,7 @@ private extension FeedViewModel {
             let text = $0.text + " " + "(\($0.meanings.count))"
             let ratingAttributedText = NSMutableAttributedString(string: text, attributes: attributes)
 
-            let range = NSString(string: $0.text).range(of: "test", options: .caseInsensitive)
+            let range = NSString(string: $0.text).range(of: searchtext ?? "", options: .caseInsensitive)
             ratingAttributedText.addAttribute(.font,
                                               value: UIFont.bold(size: 18),
                                               range: range)

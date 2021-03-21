@@ -13,6 +13,8 @@ protocol FeedViewModelProtocol {
 
     var reloadData: Signal<(), Never> { get }
 
+    var searchtext: String? { get set }
+
     var headers: [TableReusableViewModelConfigurable] { get set }
 
     var dataSource: [[TableViewCellViewModelConfigurable]] { get set }
