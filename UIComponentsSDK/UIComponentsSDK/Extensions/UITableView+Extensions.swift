@@ -10,27 +10,27 @@ import UIKit
 
 public extension UITableView {
     
-    func register<T: UITableViewCell>(cellType: T.Type) {
-        register(T.self, forCellReuseIdentifier: cellType.className)
+    func registerCell<T: UITableViewCell>(type: T.Type) {
+        register(type.self, forCellReuseIdentifier: type.className)
     }
 
-    func register<T: UITableViewCell>(cellTypes: [T.Type]) {
-        cellTypes.forEach { register(cellType: $0) }
+    func registerCells<T: UITableViewCell>(types: [T.Type]) {
+        types.forEach { registerCell(type: $0) }
     }
     
-    func register<T: UITableViewHeaderFooterView>(viewType: T.Type) {
-        register(T.self, forHeaderFooterViewReuseIdentifier: viewType.className)
+    func registerView<T: UITableViewHeaderFooterView>(type: T.Type) {
+        register(type.self, forHeaderFooterViewReuseIdentifier: type.className)
     }
     
-    func register<T: UITableViewHeaderFooterView>(viewTypes: [T.Type]) {
-        viewTypes.forEach { register(viewType: $0) }
+    func registerViews<T: UITableViewHeaderFooterView>(types: [T.Type]) {
+        types.forEach { registerView(type: $0) }
     }
     
     func dequeueCell<T: UITableViewCell>(with type: T.Type) -> T {
         if let cell = dequeueReusableCell(withIdentifier: type.className) as? T {
             return cell
         }
-        register(cellType: type)
+        registerCell(type: type)
         return dequeueReusableCell(withIdentifier: type.className) as! T
     }
     
@@ -38,7 +38,7 @@ public extension UITableView {
         if let view = dequeueReusableHeaderFooterView(withIdentifier: type.className) as? T {
             return view
         }
-        register(viewType: type)
+        registerView(type: type)
         return dequeueReusableHeaderFooterView(withIdentifier: type.className) as! T
     }
 }

@@ -10,31 +10,35 @@ import UIKit
 
 public extension UICollectionView {
     
-    func register<T: UICollectionViewCell>(cellType: T.Type) {
-        register(T.self, forCellWithReuseIdentifier: cellType.className)
+    func registerCell<T: UICollectionViewCell>(type: T.Type) {
+        register(type.self, forCellWithReuseIdentifier: type.className)
     }
 
-    func register<T: UICollectionViewCell>(cellTypes: [T.Type]) {
-        cellTypes.forEach { register(cellType: $0) }
+    func registerCells<T: UICollectionViewCell>(types: [T.Type]) {
+        types.forEach { registerCell(type: $0) }
     }
     
-    func register<T: UICollectionReusableView>(view: T.Type, of kind: String) {
-        register(T.self, forSupplementaryViewOfKind: kind, withReuseIdentifier: T.className)
+    func registerView<T: UICollectionReusableView>(type: T.Type, of kind: String) {
+        register(type.self, forSupplementaryViewOfKind: kind, withReuseIdentifier: type.className)
+    }
+    
+    func registerViews<T: UICollectionReusableView>(types: [T.Type], of kind: String) {
+        types.forEach { registerView(type: $0, of: kind) }
     }
     
     func dequeueCell<T: UICollectionViewCell>(with type: T.Type, for indexPath: IndexPath) -> T {
         if let cell = dequeueReusableCell(withReuseIdentifier: type.className, for: indexPath) as? T {
             return cell
         }
-        register(cellType: type)
+        registerCell(type: type)
         return dequeueReusableCell(withReuseIdentifier: type.className, for: indexPath) as! T
     }
     
-    func dequeue<T: UICollectionReusableView>(view: T.Type, of kind: String, for indexPath: IndexPath) -> T {
-        if let view = dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: T.className, for: indexPath) as? T {
+    func dequeueReusableView<T: UICollectionReusableView>(with type: T.Type, of kind: String, for indexPath: IndexPath) -> T {
+        if let view = dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: type.className, for: indexPath) as? T {
             return view
         }
-        register(view: view, of: kind)
+        registerView(type: type, of: kind)
         return dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: T.className, for: indexPath) as! T
     }
 }
