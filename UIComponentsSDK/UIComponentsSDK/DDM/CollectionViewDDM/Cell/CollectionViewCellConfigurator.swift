@@ -8,7 +8,7 @@
 
 import UIKit
 
-public struct CollectionViewCellConfigurator<CellType: CellConfigurable, ViewModel>: CollectionViewCellConfigurable where CellType.ViewModel == ViewModel, CellType: UICollectionViewCell {
+public struct CollectionViewCellConfigurator<CellType: Configurable, ViewModel>: CollectionViewCellConfigurable where CellType.ViewModel == ViewModel, CellType: UICollectionViewCell {
 
     public var reuseId: String {
         String(describing: CellType.self)
@@ -16,7 +16,7 @@ public struct CollectionViewCellConfigurator<CellType: CellConfigurable, ViewMod
 
     public func configure(cell collectionView: UICollectionView, indexPath: IndexPath, viewModel: CollectionViewCellViewModelConfigurable) -> UICollectionViewCell {
         var cell = collectionView.dequeueCell(with: CellType.self, for: indexPath)
-        cell.configureCell(viewModel as? ViewModel)
+        cell.configure(viewModel as? ViewModel)
         return cell
     }
 }

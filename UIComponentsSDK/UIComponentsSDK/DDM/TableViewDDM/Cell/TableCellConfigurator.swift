@@ -8,7 +8,7 @@
 
 import UIKit
 
-public struct TableViewCellConfigurator<CellType: CellConfigurable, ViewModel>: TableViewCellConfigurable where CellType.ViewModel == ViewModel, CellType: UITableViewCell {
+public struct TableViewCellConfigurator<CellType: Configurable, ViewModel>: TableViewCellConfigurable where CellType.ViewModel == ViewModel, CellType: UITableViewCell {
 
     public var reuseId: String {
         String(describing: CellType.self)
@@ -16,7 +16,7 @@ public struct TableViewCellConfigurator<CellType: CellConfigurable, ViewModel>: 
 
     public func configure(cell tableView: UITableView, viewModel: TableViewCellViewModelConfigurable) -> UITableViewCell {
         var cell = tableView.dequeueCell(with: CellType.self)
-        cell.configureCell(viewModel as? ViewModel)
+        cell.configure(viewModel as? ViewModel)
         return cell
     }
 }

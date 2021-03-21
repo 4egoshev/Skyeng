@@ -24,5 +24,16 @@ class FeedViewModel: FeedViewModelProtocol {
 
     func viewDidLoad() {
         model.getSearch(text: "new", page: 0, pageSize: 15)
+        setupDataSource()
+    }
+}
+
+private extension FeedViewModel {
+    func setupDataSource() {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            self.model.words.forEach { _ in
+                self.dataSource.append(FeedWordTableViewCellViewModel())
+            }
+        }
     }
 }

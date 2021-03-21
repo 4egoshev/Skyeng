@@ -22,6 +22,6 @@ public class ___VARIABLE_productName:identifier___CollectionViewCell: UICollecti
 }
 
 //MARK: Setup
-private extension ___VARIABLE_productName:identifier___TableViewCell {
+private extension ___VARIABLE_productName:identifier___CollectionViewCell {
     
 }
