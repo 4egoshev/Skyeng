@@ -11,6 +11,7 @@ import Foundation
 let templateNames = [
     "Service.xctemplate",
     "TableViewCell.xctemplate",
+    "TableReusableView.xctemplate",
     "CollectionViewCell.xctemplate",
     "CollectionReusableView.xctemplate"
 ]

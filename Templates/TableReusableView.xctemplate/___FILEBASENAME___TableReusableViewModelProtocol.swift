@@ -8,6 +8,6 @@
 
 import Foundation
 
-public protocol ___VARIABLE_productName:identifier___CollectionReusableViewModelProtocol: CollectionReusableSupplementaryViewModelConfigurable {
+public protocol ___VARIABLE_productName:identifier___TableReusableViewModelProtocol: TableReusableViewModelConfigurable {
         
 }

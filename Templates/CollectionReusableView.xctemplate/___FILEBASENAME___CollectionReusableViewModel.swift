@@ -12,7 +12,7 @@ public typealias ___VARIABLE_productName:identifier___CollectionReusableViewConf
 
 public struct ___VARIABLE_productName:identifier___CollectionReusableViewModel: ___VARIABLE_productName:identifier___CollectionReusableViewModelProtocol {
     
-    public var configurator: ReusableSupplementaryViewConfigurator = ___VARIABLE_productName:identifier___CollectionReusableViewConfigurator()
+    public var configurator: CollectionReusableSupplementaryViewConfigurable = ___VARIABLE_productName:identifier___CollectionReusableViewConfigurator()
     
     public init() {
         

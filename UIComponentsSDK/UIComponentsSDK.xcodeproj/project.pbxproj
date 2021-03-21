@@ -271,9 +271,17 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
+		5E8614A726079E190083A331 /* ReusableView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = ReusableView;
+			sourceTree = "<group>";
+		};
 		5E86F6882606AFE900E27727 /* TableView */ = {
 			isa = PBXGroup;
 			children = (
+				5E8614A726079E190083A331 /* ReusableView */,
 				5E86F68A2606B00700E27727 /* Cell */,
 			);
 			path = TableView;

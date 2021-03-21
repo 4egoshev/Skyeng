@@ -10,6 +10,8 @@ import UIComponentsSDK
 
 class FeedViewModel: FeedViewModelProtocol {
 
+    var headers: [TableReusableViewModelConfigurable] = []
+
     var dataSource: [TableViewCellViewModelConfigurable] = []
 
 	let model: FeedModelProtocol
