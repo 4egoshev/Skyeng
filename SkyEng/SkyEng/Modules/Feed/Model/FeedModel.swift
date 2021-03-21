@@ -27,7 +27,6 @@ class FeedModel: FeedModelProtocol {
             self?._words.value = object
         } failure: { [weak self] (error) in
             self?._error.value = error
-//            print(error)
         }
     }
 }

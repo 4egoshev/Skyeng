@@ -42,14 +42,12 @@ class FeedViewController: BaseViewController {
         return controller
     }()
 
+    private var keyboardHandler = KeyboardHandler()
+
     private var viewModel: FeedViewModelProtocol
 
-    private let ddm: TableViewDataDisplayManagerProtocol
-
-	init(viewModel: FeedViewModelProtocol,
-         ddm: TableViewDataDisplayManagerProtocol = TableViewDataDisplayManager()) {
+	init(viewModel: FeedViewModelProtocol) {
 		self.viewModel = viewModel
-        self.ddm = ddm
 		super.init()
 	}
 
@@ -67,8 +65,6 @@ class FeedViewController: BaseViewController {
 	}
 
 	override func setupUI() {
-        definesPresentationContext = true
-        extendedLayoutIncludesOpaqueBars = true
         view.backgroundColor = .white
         setupTableView()
 	}
@@ -80,6 +76,13 @@ private extension FeedViewController {
         view.addSubview(tableView)
         tableView.snp.makeConstraints {
             $0.edges.equalToSuperview()
+        }
+        keyboardHandler.setup(scrollView: tableView)
+        keyboardHandler.didTap = { [weak self] in
+            guard let self = self else { return }
+            self.searchController.isActive = false
+                self.searchController.searchBar.resignFirstResponder()
+                self.searchController.searchBar.endEditing(true)
         }
     }
 }
@@ -113,5 +116,9 @@ extension FeedViewController: UITableViewDelegate {
 extension FeedViewController: UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
         viewModel.searchtext = searchController.searchBar.text
+    }
+
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
     }
 }

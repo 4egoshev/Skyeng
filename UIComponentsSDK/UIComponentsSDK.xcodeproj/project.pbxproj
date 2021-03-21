@@ -19,6 +19,8 @@
 		5E38171D2607B5AB00C36A82 /* SpacingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E38171A2607B5AB00C36A82 /* SpacingTableViewCell.swift */; };
 		5E38171E2607B5AB00C36A82 /* SpacingTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E38171B2607B5AB00C36A82 /* SpacingTableViewCellViewModel.swift */; };
 		5E38171F2607B5AB00C36A82 /* SpacingTableViewCellViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E38171C2607B5AB00C36A82 /* SpacingTableViewCellViewModelProtocol.swift */; };
+		5E701B222607DBC100C02FCD /* UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E701B212607DBC100C02FCD /* UI.swift */; };
+		5E701B262607E77500C02FCD /* KeyboardHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E701B252607E77500C02FCD /* KeyboardHandler.swift */; };
 		5E8533222606532E000658F2 /* UIComponentsSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E8533182606532E000658F2 /* UIComponentsSDK.framework */; };
 		5E8533272606532E000658F2 /* UIComponentsSDKTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8533262606532E000658F2 /* UIComponentsSDKTests.swift */; };
 		5E8533292606532E000658F2 /* UIComponentsSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = 5E85331B2606532E000658F2 /* UIComponentsSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -69,6 +71,8 @@
 		5E38171A2607B5AB00C36A82 /* SpacingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpacingTableViewCell.swift; sourceTree = "<group>"; };
 		5E38171B2607B5AB00C36A82 /* SpacingTableViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpacingTableViewCellViewModel.swift; sourceTree = "<group>"; };
 		5E38171C2607B5AB00C36A82 /* SpacingTableViewCellViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpacingTableViewCellViewModelProtocol.swift; sourceTree = "<group>"; };
+		5E701B212607DBC100C02FCD /* UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UI.swift; sourceTree = "<group>"; };
+		5E701B252607E77500C02FCD /* KeyboardHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardHandler.swift; sourceTree = "<group>"; };
 		5E8533182606532E000658F2 /* UIComponentsSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UIComponentsSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E85331B2606532E000658F2 /* UIComponentsSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIComponentsSDK.h; sourceTree = "<group>"; };
 		5E85331C2606532E000658F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -210,6 +214,15 @@
 			name = Spacing;
 			sourceTree = "<group>";
 		};
+		5E701B202607DBB700C02FCD /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				5E701B212607DBC100C02FCD /* UI.swift */,
+				5E701B252607E77500C02FCD /* KeyboardHandler.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 		5E85330E2606532E000658F2 = {
 			isa = PBXGroup;
 			children = (
@@ -233,6 +246,7 @@
 		5E85331A2606532E000658F2 /* UIComponentsSDK */ = {
 			isa = PBXGroup;
 			children = (
+				5E701B202607DBB700C02FCD /* Common */,
 				5E85353D2606778A000658F2 /* Protocols */,
 				5E85352B260671BD000658F2 /* Extensions */,
 				5E8534C926066CE3000658F2 /* DDM */,
@@ -513,12 +527,14 @@
 				5E8534D226066D45000658F2 /* CollectionViewDataDisplayManager.swift in Sources */,
 				5E13C0DD2606D82700240E69 /* CollectionReusableSupplementaryViewModelConfigurable.swift in Sources */,
 				5E3817142607B4F800C36A82 /* UIViewController+Extensions.swift in Sources */,
+				5E701B222607DBC100C02FCD /* UI.swift in Sources */,
 				5E85352D260671D8000658F2 /* UITableView+Extensions.swift in Sources */,
 				5E05DBB22607CF030092CE3E /* UIView+Extensions.swift in Sources */,
 				5E38171F2607B5AB00C36A82 /* SpacingTableViewCellViewModelProtocol.swift in Sources */,
 				5E13C0E12606D88600240E69 /* CollectionReusableSupplementaryViewConfigurable.swift in Sources */,
 				5E13C0CF2606CBB900240E69 /* FeedWordTableViewCellViewModel.swift in Sources */,
 				5E85351C26067024000658F2 /* CollectionViewCellConfigurable.swift in Sources */,
+				5E701B262607E77500C02FCD /* KeyboardHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
