@@ -11,6 +11,8 @@ import UIKit
 public protocol TableReusableViewModelConfigurable {
     
     var configurator: TableReusableViewConfigurable { get }
+    
+    var height: CGFloat { get }
 
     func dequeueCell(tableView: UITableView) -> UITableViewHeaderFooterView
 }

@@ -13,9 +13,8 @@ class FeedViewController: BaseViewController {
 
     private lazy var tableView: UITableView = {
         let tableView = UITableView()
-        tableView.dataSource = ddm
-        tableView.delegate = ddm
-        ddm.dataSource = viewModel.dataSource
+        tableView.dataSource = self
+        tableView.delegate = self
         return tableView
     }()
 
@@ -56,5 +55,34 @@ private extension FeedViewController {
         tableView.snp.makeConstraints {
             $0.edges.equalToSuperview()
         }
+
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+            self.tableView.reloadData()
+        }
+    }
+}
+
+// MARK: UITableViewDataSource
+extension FeedViewController: UITableViewDataSource {
+    func numberOfSections(in tableView: UITableView) -> Int {
+        viewModel.headers.count
+    }
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        viewModel.dataSource[section].count
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        viewModel.dataSource[indexPath.section][indexPath.row].dequeueCell(tableView: tableView)
+    }
+}
+
+// MARK: UITableViewDelegate
+extension FeedViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        viewModel.headers[section].dequeueCell(tableView: tableView)
+    }
+
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        viewModel.headers[section].height
     }
 }

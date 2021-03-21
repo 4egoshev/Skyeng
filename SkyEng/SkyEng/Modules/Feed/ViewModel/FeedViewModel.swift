@@ -12,7 +12,7 @@ class FeedViewModel: FeedViewModelProtocol {
 
     var headers: [TableReusableViewModelConfigurable] = []
 
-    var dataSource: [TableViewCellViewModelConfigurable] = []
+    var dataSource: [[TableViewCellViewModelConfigurable]] = []
 
 	let model: FeedModelProtocol
 
@@ -32,9 +32,10 @@ class FeedViewModel: FeedViewModelProtocol {
 
 private extension FeedViewModel {
     func setupDataSource() {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
             self.model.words.forEach { _ in
-                self.dataSource.append(FeedWordTableViewCellViewModel())
+                self.headers.append(FeedWordTableReusableViewModel())
+                self.dataSource.append([FeedWordTableViewCellViewModel()])
             }
         }
     }

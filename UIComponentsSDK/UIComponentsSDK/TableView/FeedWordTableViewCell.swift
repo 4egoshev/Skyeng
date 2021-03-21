@@ -34,6 +34,7 @@ private extension FeedWordTableViewCell {
         containerView.snp.makeConstraints {
             $0.left.top.equalToSuperview().offset(8)
             $0.right.bottom.equalToSuperview().offset(-8)
+            $0.height.equalTo(80)
         }
     }
 }

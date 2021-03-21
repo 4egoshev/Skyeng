@@ -12,7 +12,7 @@ protocol FeedViewModelProtocol {
 
     var headers: [TableReusableViewModelConfigurable] { get set }
 
-    var dataSource: [TableViewCellViewModelConfigurable] { get set }
+    var dataSource: [[TableViewCellViewModelConfigurable]] { get set }
 
 	var model: FeedModelProtocol { get }
 
