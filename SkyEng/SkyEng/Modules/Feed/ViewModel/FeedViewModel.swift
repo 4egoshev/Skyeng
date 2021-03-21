@@ -15,9 +15,14 @@ class FeedViewModel: FeedViewModelProtocol {
     var reloadData: Signal<(), Never>
     private var reloadDataObserver: Signal<(), Never>.Observer
 
+    var insertRows: Signal<[IndexPath], Never>
+    private let insertRowsObserver: Signal<[IndexPath], Never>.Observer
+
+    var deleteRows: Signal<[IndexPath], Never>
+    private let deleteRowsObserver: Signal<[IndexPath], Never>.Observer
+
     var searchtext: String? {
         didSet {
-            print("searchtext = \(searchtext)")
             getSearch(text: searchtext ?? "")
         }
     }
@@ -29,6 +34,8 @@ class FeedViewModel: FeedViewModelProtocol {
 	let model: FeedModelProtocol
 
     private var openedSections: [Bool] = []
+    private var didTapOpen: Bool = false
+    private var indexPaths: [IndexPath]?
 
     private let router: FeedRouterProtocol
 
@@ -38,6 +45,8 @@ class FeedViewModel: FeedViewModelProtocol {
 		self.router = router
 
         (reloadData, reloadDataObserver) = Signal.pipe()
+        (insertRows, insertRowsObserver) = Signal.pipe()
+        (deleteRows, deleteRowsObserver) = Signal.pipe()
 	}
 
     func viewDidLoad() {
@@ -55,9 +64,19 @@ private extension FeedViewModel {
     func bind() {
         model.words
             .signal
+
             .observeValues { [weak self] words in
-                self?.setupDataSource(with: words)
-                self?.reloadDataObserver.send(value: ())
+                guard let self = self else { return }
+                self.setupDataSource(with: words)
+
+                if let indexPaths = self.indexPaths, let section = indexPaths.first?.section {
+                    words[section].isOpened
+                        ? self.insertRowsObserver.send(value: indexPaths)
+                        : self.deleteRowsObserver.send(value: indexPaths)
+                } else {
+                    self.reloadDataObserver.send(value: ())
+                }
+                self.indexPaths = nil
             }
 
         model.error
@@ -70,31 +89,39 @@ private extension FeedViewModel {
 
 // MARK: Setup
 private extension FeedViewModel {
-    func setupDataSource(with words: [Word]) {
+    func setupDataSource(with words: [FeedWord]) {
         headers.removeAll()
         dataSource.removeAll()
-        headers = words.map {
-//                self.dataSource.append([SpacingTableViewCellViewModel()])
+        headers = words.enumerated().map { (index, word) in
+            if word.isOpened {
+                let veiwModels = word.meanings.map {
+                    FeedWordTableViewCellViewModel(text: $0.translation.text)
+                }
+                dataSource.append(veiwModels)
+            } else {
+                self.dataSource.append([])
+            }
 
             let attributes: [NSAttributedString.Key: Any] = [
                 .font: UIFont.regular(size: 16),
                 .foregroundColor: UIColor.black
             ]
-            let text = $0.text + " " + "(\($0.meanings.count))"
+            let text = word.text + " " + "(\(word.meanings.count))"
             let ratingAttributedText = NSMutableAttributedString(string: text, attributes: attributes)
 
-            let range = NSString(string: $0.text).range(of: searchtext ?? "", options: .caseInsensitive)
+            let range = NSString(string: word.text).range(of: searchtext ?? "", options: .caseInsensitive)
             ratingAttributedText.addAttribute(.font,
                                               value: UIFont.bold(size: 18),
                                               range: range)
 
-            return FeedWordTableReusableViewModel(text: ratingAttributedText)
-        }
+            var viewModel = FeedWordTableReusableViewModel(text: ratingAttributedText, isOpened: word.isOpened)
+            viewModel.didTap = { [weak self, index, word] in
+                guard let self = self else { return }
+                self.indexPaths = word.meanings.enumerated().map { (i, _) in IndexPath(row: i, section: index) }
+                self.model.openWord(at: index)
+            }
 
-        words.forEach { word in
-            dataSource.append(word.meanings.map {
-                return FeedWordTableViewCellViewModel(text: $0.translation.text)
-            })
+            return viewModel
         }
     }
 }

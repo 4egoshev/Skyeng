@@ -13,6 +13,10 @@ protocol FeedViewModelProtocol {
 
     var reloadData: Signal<(), Never> { get }
 
+    var insertRows: Signal<[IndexPath], Never> { get }
+
+    var deleteRows: Signal<[IndexPath], Never> { get }
+
     var searchtext: String? { get set }
 
     var headers: [TableReusableViewModelConfigurable] { get set }

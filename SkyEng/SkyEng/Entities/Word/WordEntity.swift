@@ -1,5 +1,5 @@
 //
-//  Word.swift
+//  WordEntity.swift
 //  SkyEng
 //
 //  Created by Александр Чегошев on 21.03.2021.
@@ -8,8 +8,8 @@
 
 import Foundation
 
-struct Word: Decodable {
+struct WordEntity: Decodable {
     var id: Int
     var text: String
-    var meanings: [Meaning]
+    var meanings: [MeaningEntity]
 }

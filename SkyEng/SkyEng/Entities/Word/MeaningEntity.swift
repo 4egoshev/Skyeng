@@ -1,5 +1,5 @@
 //
-//  Meaning.swift
+//  MeaningEntity.swift
 //  SkyEng
 //
 //  Created by Александр Чегошев on 22.03.2021.
@@ -8,9 +8,9 @@
 
 import Foundation
 
-struct Meaning: Decodable {
+struct MeaningEntity: Decodable {
     var id: Int
-    var translation: Translation
+    var translation: TranslationEntity
     var partOfSpeechCode: String
     var previewUrl: String
     var imageUrl: String

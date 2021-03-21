@@ -16,9 +16,11 @@
 		5E05DBAC2607CE960092CE3E /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E05DBAB2607CE960092CE3E /* BaseViewController.swift */; };
 		5E13C0A42606C1E000240E69 /* WordsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E13C0A22606C1E000240E69 /* WordsService.swift */; };
 		5E13C0A52606C1E000240E69 /* WordsServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E13C0A32606C1E000240E69 /* WordsServiceProtocol.swift */; };
-		5E13C0BC2606C58600240E69 /* Word.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E13C0BB2606C58600240E69 /* Word.swift */; };
-		5E3817112607B34A00C36A82 /* Meaning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3817102607B34A00C36A82 /* Meaning.swift */; };
+		5E13C0BC2606C58600240E69 /* WordEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E13C0BB2606C58600240E69 /* WordEntity.swift */; };
+		5E3817112607B34A00C36A82 /* MeaningEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3817102607B34A00C36A82 /* MeaningEntity.swift */; };
 		5E3817232607BAF500C36A82 /* Translation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3817222607BAF500C36A82 /* Translation.swift */; };
+		5E701B472607EC8800C02FCD /* FeedWord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E701B462607EC8800C02FCD /* FeedWord.swift */; };
+		5E701B4F2607F36A00C02FCD /* Reactive+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E701B4E2607F36A00C02FCD /* Reactive+Extensions.swift */; };
 		5E85326826064EF5000658F2 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E85326726064EF5000658F2 /* Router.swift */; };
 		5E8533F226065B66000658F2 /* UIComponentsSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E8533F126065B66000658F2 /* UIComponentsSDK.framework */; };
 		5E8533F326065B66000658F2 /* UIComponentsSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5E8533F126065B66000658F2 /* UIComponentsSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -72,9 +74,11 @@
 		5E05DBAB2607CE960092CE3E /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		5E13C0A22606C1E000240E69 /* WordsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordsService.swift; sourceTree = "<group>"; };
 		5E13C0A32606C1E000240E69 /* WordsServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordsServiceProtocol.swift; sourceTree = "<group>"; };
-		5E13C0BB2606C58600240E69 /* Word.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Word.swift; sourceTree = "<group>"; };
-		5E3817102607B34A00C36A82 /* Meaning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meaning.swift; sourceTree = "<group>"; };
+		5E13C0BB2606C58600240E69 /* WordEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordEntity.swift; sourceTree = "<group>"; };
+		5E3817102607B34A00C36A82 /* MeaningEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeaningEntity.swift; sourceTree = "<group>"; };
 		5E3817222607BAF500C36A82 /* Translation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Translation.swift; sourceTree = "<group>"; };
+		5E701B462607EC8800C02FCD /* FeedWord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedWord.swift; sourceTree = "<group>"; };
+		5E701B4E2607F36A00C02FCD /* Reactive+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Reactive+Extensions.swift"; sourceTree = "<group>"; };
 		5E85326726064EF5000658F2 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		5E85334226065458000658F2 /* UIComponentsSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = UIComponentsSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E8533472606545C000658F2 /* NetworkSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = NetworkSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -149,6 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				5E05DBAB2607CE960092CE3E /* BaseViewController.swift */,
+				5E701B4C2607F35500C02FCD /* Extensions */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -181,11 +186,19 @@
 		5E13C0BF2606C58C00240E69 /* Word */ = {
 			isa = PBXGroup;
 			children = (
-				5E13C0BB2606C58600240E69 /* Word.swift */,
-				5E3817102607B34A00C36A82 /* Meaning.swift */,
+				5E13C0BB2606C58600240E69 /* WordEntity.swift */,
+				5E3817102607B34A00C36A82 /* MeaningEntity.swift */,
 				5E3817222607BAF500C36A82 /* Translation.swift */,
 			);
 			path = Word;
+			sourceTree = "<group>";
+		};
+		5E701B4C2607F35500C02FCD /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				5E701B4E2607F36A00C02FCD /* Reactive+Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		5E85326626064EEF000658F2 /* Router */ = {
@@ -300,6 +313,7 @@
 			children = (
 				C5D963E7CC96601B765B5E5A /* FeedModelProtocol.swift */,
 				83DD119BB2B3A2B36D8DF77C /* FeedModel.swift */,
+				5E701B462607EC8800C02FCD /* FeedWord.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -499,6 +513,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E701B4F2607F36A00C02FCD /* Reactive+Extensions.swift in Sources */,
 				5EF3A3BD2605771A00B240EC /* AppCoordinator.swift in Sources */,
 				5ECF3233260568C0007EC2BB /* AppDelegate.swift in Sources */,
 				5EF3A3C9260578E100B240EC /* Assembler+Extention.swift in Sources */,
@@ -510,13 +525,14 @@
 				1BBE63F04F8557C954E7B388 /* FeedViewModelProtocol.swift in Sources */,
 				5E13C0A52606C1E000240E69 /* WordsServiceProtocol.swift in Sources */,
 				D29655FFF3E556DF882A58F0 /* FeedViewModel.swift in Sources */,
+				5E701B472607EC8800C02FCD /* FeedWord.swift in Sources */,
 				F071481ABEF747B978B82E26 /* FeedModelProtocol.swift in Sources */,
-				5E13C0BC2606C58600240E69 /* Word.swift in Sources */,
+				5E13C0BC2606C58600240E69 /* WordEntity.swift in Sources */,
 				1DA33AB56F1DBF29B049B80F /* FeedModel.swift in Sources */,
 				575181168367C85C17CAF440 /* FeedAssemblyProtocol.swift in Sources */,
 				485251ED62FEFF2823FB9CD5 /* FeedAssembly.swift in Sources */,
 				5E13C0A42606C1E000240E69 /* WordsService.swift in Sources */,
-				5E3817112607B34A00C36A82 /* Meaning.swift in Sources */,
+				5E3817112607B34A00C36A82 /* MeaningEntity.swift in Sources */,
 				0EC807E8075F48B2C297CB0B /* FeedRouterProtocol.swift in Sources */,
 				91C2444AF6E925E275AD80DC /* FeedRouter.swift in Sources */,
 				5E3817232607BAF500C36A82 /* Translation.swift in Sources */,

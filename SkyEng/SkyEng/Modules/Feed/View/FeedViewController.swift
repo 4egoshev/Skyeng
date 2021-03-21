@@ -62,6 +62,8 @@ class FeedViewController: BaseViewController {
 
     override func bindUI() {
         tableView.reactive.reloadData <~ viewModel.reloadData
+        tableView.reactive.insertRows(animation: .fade) <~ viewModel.insertRows
+        tableView.reactive.deleteRows(animation: .fade) <~ viewModel.deleteRows
 	}
 
 	override func setupUI() {

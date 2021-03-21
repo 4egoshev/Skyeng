@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Translation: Decodable {
+struct TranslationEntity: Decodable {
     var text: String
     var note: String?
 }

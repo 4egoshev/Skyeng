@@ -10,13 +10,15 @@ import ReactiveSwift
 
 protocol FeedModelProtocol {
 
-    var words: Property<[Word]> { get }
+    var words: Property<[FeedWord]> { get }
 
     var error: Property<Error?> { get }
 
     var wordsService: WordsServiceProtocol { get }
 
     func getSearch(text: String, page: Int, pageSize: Int)
+
+    func openWord(at index: Int)
 }
 
 extension FeedModelProtocol {

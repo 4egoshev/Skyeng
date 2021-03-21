@@ -12,7 +12,6 @@ public class FeedWordTableReusableView: UITableViewHeaderFooterView, Configurabl
     
     private lazy var label: UILabel = {
         let label = UILabel()
-        label.attributedText = viewModel?.text
         return label
     }()
     
@@ -26,6 +25,11 @@ public class FeedWordTableReusableView: UITableViewHeaderFooterView, Configurabl
         contentView.backgroundColor = .white
         setupLabel()
     }
+    
+    public override func prepareForReuse() {
+        label.text = nil
+        super.prepareForReuse()
+    }
 }
 
 //MARK: Setup
@@ -36,5 +40,21 @@ private extension FeedWordTableReusableView {
             $0.left.top.equalToSuperview().offset(8)
             $0.right.bottom.equalToSuperview().offset(-8)
         }
+        
+        label.attributedText = viewModel?.text
+        
+        guard viewModel?.didTap != nil else { return }
+        
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(didTap))
+        tapGesture.cancelsTouchesInView = false
+
+        contentView.addGestureRecognizer(tapGesture)
+    }
+}
+
+//MARK: Action
+private extension FeedWordTableReusableView {
+    @objc func didTap() {
+        viewModel?.didTap?()
     }
 }

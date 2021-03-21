@@ -11,4 +11,8 @@ import Foundation
 public protocol FeedWordTableReusableViewModelProtocol: TableReusableViewModelConfigurable {
         
     var text: NSMutableAttributedString { get }
+    
+    var isOpened: Bool { get }
+    
+    var didTap: (() -> Void)? { get set }
 }
