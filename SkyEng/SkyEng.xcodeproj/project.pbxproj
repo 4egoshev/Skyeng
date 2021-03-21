@@ -13,6 +13,8 @@
 		485251ED62FEFF2823FB9CD5 /* FeedAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842F92B9587D35DB06D6E6F2 /* FeedAssembly.swift */; };
 		575181168367C85C17CAF440 /* FeedAssemblyProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28BB1FF1984A25860BF3B04C /* FeedAssemblyProtocol.swift */; };
 		58ACB34C32D9FD0CF7DF007E /* Pods_SkyEng.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA198069719D9A81B48B9EF0 /* Pods_SkyEng.framework */; };
+		5E13C0A42606C1E000240E69 /* WordsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E13C0A22606C1E000240E69 /* WordsService.swift */; };
+		5E13C0A52606C1E000240E69 /* WordsServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E13C0A32606C1E000240E69 /* WordsServiceProtocol.swift */; };
 		5E85326826064EF5000658F2 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E85326726064EF5000658F2 /* Router.swift */; };
 		5E8533F226065B66000658F2 /* UIComponentsSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E8533F126065B66000658F2 /* UIComponentsSDK.framework */; };
 		5E8533F326065B66000658F2 /* UIComponentsSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5E8533F126065B66000658F2 /* UIComponentsSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -63,6 +65,8 @@
 		2EE98A0B616D059C12F745A0 /* Pods-SkyEng.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SkyEng.release.xcconfig"; path = "Target Support Files/Pods-SkyEng/Pods-SkyEng.release.xcconfig"; sourceTree = "<group>"; };
 		359A4F20A061A9CDCB222E1F /* FeedViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		3608BE322C995DA0D8F34629 /* Pods-SkyEng.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SkyEng.debug.xcconfig"; path = "Target Support Files/Pods-SkyEng/Pods-SkyEng.debug.xcconfig"; sourceTree = "<group>"; };
+		5E13C0A22606C1E000240E69 /* WordsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordsService.swift; sourceTree = "<group>"; };
+		5E13C0A32606C1E000240E69 /* WordsServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordsServiceProtocol.swift; sourceTree = "<group>"; };
 		5E85326726064EF5000658F2 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		5E85334226065458000658F2 /* UIComponentsSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = UIComponentsSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E8533472606545C000658F2 /* NetworkSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = NetworkSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -133,6 +137,23 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		5E13C0A02606C18500240E69 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				5E13C0A12606C19B00240E69 /* Words */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		5E13C0A12606C19B00240E69 /* Words */ = {
+			isa = PBXGroup;
+			children = (
+				5E13C0A22606C1E000240E69 /* WordsService.swift */,
+				5E13C0A32606C1E000240E69 /* WordsServiceProtocol.swift */,
+			);
+			path = Words;
+			sourceTree = "<group>";
+		};
 		5E85326626064EEF000658F2 /* Router */ = {
 			isa = PBXGroup;
 			children = (
@@ -167,6 +188,7 @@
 				5EF3A3C3260578B800B240EC /* App */,
 				5EF3A3C5260578C300B240EC /* Assembly */,
 				7FC831BBFF9C96B52F5590CA /* Modules */,
+				5E13C0A02606C18500240E69 /* Services */,
 				5E85326626064EEF000658F2 /* Router */,
 				5EF3A3C02605781E00B240EC /* Support Files */,
 			);
@@ -449,11 +471,13 @@
 				5E86F6B42606B19300E27727 /* ModuleAssembly.swift in Sources */,
 				85E69D38CD6F7DD50A4CE31F /* FeedViewController.swift in Sources */,
 				1BBE63F04F8557C954E7B388 /* FeedViewModelProtocol.swift in Sources */,
+				5E13C0A52606C1E000240E69 /* WordsServiceProtocol.swift in Sources */,
 				D29655FFF3E556DF882A58F0 /* FeedViewModel.swift in Sources */,
 				F071481ABEF747B978B82E26 /* FeedModelProtocol.swift in Sources */,
 				1DA33AB56F1DBF29B049B80F /* FeedModel.swift in Sources */,
 				575181168367C85C17CAF440 /* FeedAssemblyProtocol.swift in Sources */,
 				485251ED62FEFF2823FB9CD5 /* FeedAssembly.swift in Sources */,
+				5E13C0A42606C1E000240E69 /* WordsService.swift in Sources */,
 				0EC807E8075F48B2C297CB0B /* FeedRouterProtocol.swift in Sources */,
 				91C2444AF6E925E275AD80DC /* FeedRouter.swift in Sources */,
 			);

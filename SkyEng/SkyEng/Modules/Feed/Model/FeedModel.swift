@@ -10,4 +10,9 @@ import Foundation
 
 class FeedModel: FeedModelProtocol {
 
+    let wordsService: WordsServiceProtocol
+
+    init(wordsService: WordsServiceProtocol) {
+        self.wordsService = wordsService
+    }
 }

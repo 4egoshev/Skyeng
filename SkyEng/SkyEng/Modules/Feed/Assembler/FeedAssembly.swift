@@ -17,7 +17,8 @@ class FeedAssembly: FeedAssemblyProtocol {
     }
 
 	func make() -> FeedViewController {
-		let model = FeedModel()
+        let wordsService = WordsService()
+        let model = FeedModel(wordsService: wordsService)
 		let router = FeedRouter(resolver: resolver)
 		let viewModel = FeedViewModel(model: model, router: router)
 		let controller = FeedViewController(viewModel: viewModel)

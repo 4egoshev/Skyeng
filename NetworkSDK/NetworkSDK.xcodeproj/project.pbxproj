@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5E13C0AA2606C29200240E69 /* WordsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E13C0A92606C29200240E69 /* WordsRequest.swift */; };
+		5E13C0AE2606C2DD00240E69 /* SearhParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E13C0AD2606C2DD00240E69 /* SearhParameters.swift */; };
+		5E13C0B22606C34500240E69 /* Serializator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E13C0B12606C34500240E69 /* Serializator.swift */; };
 		5ECF325D26056C8A007EC2BB /* NetworkSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5ECF325326056C89007EC2BB /* NetworkSDK.framework */; };
 		5ECF326226056C8A007EC2BB /* NetworkSDKTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECF326126056C8A007EC2BB /* NetworkSDKTests.swift */; };
 		5ECF326426056C8A007EC2BB /* NetworkSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = 5ECF325626056C89007EC2BB /* NetworkSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -29,6 +32,9 @@
 /* Begin PBXFileReference section */
 		005C2E42B98814B729AC565A /* Pods-NetworkSDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NetworkSDK.release.xcconfig"; path = "Target Support Files/Pods-NetworkSDK/Pods-NetworkSDK.release.xcconfig"; sourceTree = "<group>"; };
 		3BE6BD26886485865F6A0ABE /* libPods-NetworkSDK.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NetworkSDK.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5E13C0A92606C29200240E69 /* WordsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordsRequest.swift; sourceTree = "<group>"; };
+		5E13C0AD2606C2DD00240E69 /* SearhParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearhParameters.swift; sourceTree = "<group>"; };
+		5E13C0B12606C34500240E69 /* Serializator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Serializator.swift; sourceTree = "<group>"; };
 		5ECF325326056C89007EC2BB /* NetworkSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NetworkSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5ECF325626056C89007EC2BB /* NetworkSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkSDK.h; sourceTree = "<group>"; };
 		5ECF325726056C89007EC2BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -69,6 +75,32 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		5E13C0A72606C25900240E69 /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				5E13C0B12606C34500240E69 /* Serializator.swift */,
+				5E13C0B52606C35D00240E69 /* Words */,
+			);
+			path = Requests;
+			sourceTree = "<group>";
+		};
+		5E13C0A82606C27000240E69 /* Parameters */ = {
+			isa = PBXGroup;
+			children = (
+				5E13C0AD2606C2DD00240E69 /* SearhParameters.swift */,
+			);
+			path = Parameters;
+			sourceTree = "<group>";
+		};
+		5E13C0B52606C35D00240E69 /* Words */ = {
+			isa = PBXGroup;
+			children = (
+				5E13C0A82606C27000240E69 /* Parameters */,
+				5E13C0A92606C29200240E69 /* WordsRequest.swift */,
+			);
+			path = Words;
+			sourceTree = "<group>";
+		};
 		5ECF324926056C89007EC2BB = {
 			isa = PBXGroup;
 			children = (
@@ -95,6 +127,7 @@
 				5ECF325626056C89007EC2BB /* NetworkSDK.h */,
 				5ECF325726056C89007EC2BB /* Info.plist */,
 				5EF3A39B2605738C00B240EC /* Network */,
+				5E13C0A72606C25900240E69 /* Requests */,
 			);
 			path = NetworkSDK;
 			sourceTree = "<group>";
@@ -265,6 +298,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				5EF3A39D260573BB00B240EC /* Networker.swift in Sources */,
+				5E13C0AE2606C2DD00240E69 /* SearhParameters.swift in Sources */,
+				5E13C0B22606C34500240E69 /* Serializator.swift in Sources */,
+				5E13C0AA2606C29200240E69 /* WordsRequest.swift in Sources */,
 				5EF3A3A52605740B00B240EC /* Logger.swift in Sources */,
 				5EF3A3A1260573E000B240EC /* Interceptor.swift in Sources */,
 			);
