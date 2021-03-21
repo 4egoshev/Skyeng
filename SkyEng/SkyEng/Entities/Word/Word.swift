@@ -11,4 +11,5 @@ import Foundation
 struct Word: Decodable {
     var id: Int
     var text: String
+    var meanings: [Meaning]
 }

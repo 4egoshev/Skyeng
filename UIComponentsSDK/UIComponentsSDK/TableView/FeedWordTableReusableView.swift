@@ -12,7 +12,7 @@ public class FeedWordTableReusableView: UITableViewHeaderFooterView, Configurabl
     
     private lazy var label: UILabel = {
         let label = UILabel()
-        label.text = "ueflgjhleu"
+        label.attributedText = viewModel?.text
         return label
     }()
     

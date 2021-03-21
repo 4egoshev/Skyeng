@@ -12,11 +12,15 @@ public typealias FeedWordTableReusableViewConfigurator = TableReusableViewConfig
 
 public struct FeedWordTableReusableViewModel: FeedWordTableReusableViewModelProtocol {
     
-    public var height: CGFloat = 44.0
+    public var text: NSMutableAttributedString
+    
+    public var height: CGFloat
     
     public var configurator: TableReusableViewConfigurable = FeedWordTableReusableViewConfigurator()
     
-    public init() {
-        
+    public init(text: NSMutableAttributedString,
+                height: CGFloat = 44.0) {
+        self.text = text
+        self.height = height
     }
 }

@@ -16,7 +16,7 @@ public struct ___VARIABLE_productName:identifier___TableReusableViewModel: ___VA
     
     public var configurator: TableReusableViewConfigurable = ___VARIABLE_productName:identifier___TableReusableViewConfigurator()
     
-    public init() {
-        
+    public init(height: CGFloat) {
+        self.height = height
     }
 }

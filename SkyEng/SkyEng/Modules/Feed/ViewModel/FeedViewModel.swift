@@ -6,6 +6,7 @@
 //  Copyright © 2021 SkyEng. All rights reserved.
 //
 
+import UIKit
 import UIComponentsSDK
 
 class FeedViewModel: FeedViewModelProtocol {
@@ -25,7 +26,7 @@ class FeedViewModel: FeedViewModelProtocol {
 	}
 
     func viewDidLoad() {
-        model.getSearch(text: "new", page: 0, pageSize: 15)
+        model.getSearch(text: "test", page: 0, pageSize: 15)
         setupDataSource()
     }
 }
@@ -33,9 +34,22 @@ class FeedViewModel: FeedViewModelProtocol {
 private extension FeedViewModel {
     func setupDataSource() {
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-            self.model.words.forEach { _ in
-                self.headers.append(FeedWordTableReusableViewModel())
+            self.headers = self.model.words.map {
                 self.dataSource.append([FeedWordTableViewCellViewModel()])
+
+                let attributes: [NSAttributedString.Key: Any] = [
+                    .font: UIFont.regular(size: 16),
+                    .foregroundColor: UIColor.black
+                ]
+                let text = $0.text + " " + "(\($0.meanings.count))"
+                let ratingAttributedText = NSMutableAttributedString(string: text, attributes: attributes)
+
+                let range = NSString(string: $0.text).range(of: "test", options: .caseInsensitive)
+                ratingAttributedText.addAttribute(.font,
+                                                  value: UIFont.bold(size: 18),
+                                                  range: range)
+
+                return FeedWordTableReusableViewModel(text: ratingAttributedText)
             }
         }
     }
