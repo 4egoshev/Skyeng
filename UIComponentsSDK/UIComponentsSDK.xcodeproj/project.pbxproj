@@ -29,6 +29,9 @@
 		5E85352D260671D8000658F2 /* UITableView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E85352C260671D8000658F2 /* UITableView+Extensions.swift */; };
 		5E853538260673C5000658F2 /* UICollectionView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E853537260673C5000658F2 /* UICollectionView+Extensions.swift */; };
 		5E85353F26067796000658F2 /* ClassNameProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E85353E26067796000658F2 /* ClassNameProtocol.swift */; };
+		5E86149A2607979A0083A331 /* TableReusableViewConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8614992607979A0083A331 /* TableReusableViewConfigurable.swift */; };
+		5E86149E260797BF0083A331 /* TableReusableViewModelConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E86149D260797BF0083A331 /* TableReusableViewModelConfigurable.swift */; };
+		5E8614A2260797D60083A331 /* TableReusableViewConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8614A1260797D60083A331 /* TableReusableViewConfigurator.swift */; };
 		DA2132BBC52FF12D35623415 /* libPods-UIComponentsSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 170D9A4A214B5576D543AC93 /* libPods-UIComponentsSDK.a */; };
 /* End PBXBuildFile section */
 
@@ -71,6 +74,9 @@
 		5E85352C260671D8000658F2 /* UITableView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extensions.swift"; sourceTree = "<group>"; };
 		5E853537260673C5000658F2 /* UICollectionView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extensions.swift"; sourceTree = "<group>"; };
 		5E85353E26067796000658F2 /* ClassNameProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassNameProtocol.swift; sourceTree = "<group>"; };
+		5E8614992607979A0083A331 /* TableReusableViewConfigurable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableReusableViewConfigurable.swift; sourceTree = "<group>"; };
+		5E86149D260797BF0083A331 /* TableReusableViewModelConfigurable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableReusableViewModelConfigurable.swift; sourceTree = "<group>"; };
+		5E8614A1260797D60083A331 /* TableReusableViewConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableReusableViewConfigurator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +154,16 @@
 			path = ReusableView;
 			sourceTree = "<group>";
 		};
+		5E13C12026076A5F00240E69 /* ReusableView */ = {
+			isa = PBXGroup;
+			children = (
+				5E8614A1260797D60083A331 /* TableReusableViewConfigurator.swift */,
+				5E8614992607979A0083A331 /* TableReusableViewConfigurable.swift */,
+				5E86149D260797BF0083A331 /* TableReusableViewModelConfigurable.swift */,
+			);
+			path = ReusableView;
+			sourceTree = "<group>";
+		};
 		5E85330E2606532E000658F2 = {
 			isa = PBXGroup;
 			children = (
@@ -215,6 +231,7 @@
 			isa = PBXGroup;
 			children = (
 				5E85350726066F76000658F2 /* TableViewDataDisplayManager.swift */,
+				5E13C12026076A5F00240E69 /* ReusableView */,
 				5E13C0ED2606D9A200240E69 /* Cell */,
 			);
 			path = TableViewDDM;
@@ -425,12 +442,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				5E853538260673C5000658F2 /* UICollectionView+Extensions.swift in Sources */,
+				5E86149A2607979A0083A331 /* TableReusableViewConfigurable.swift in Sources */,
 				5E13C0CE2606CBB900240E69 /* FeedWordTableViewCell.swift in Sources */,
 				5E8534CB26066D01000658F2 /* Configurable.swift in Sources */,
 				5E85351426066FAF000658F2 /* TableViewCellConfigurable.swift in Sources */,
 				5E85353F26067796000658F2 /* ClassNameProtocol.swift in Sources */,
 				5E85350C26066F8B000658F2 /* TableCellConfigurator.swift in Sources */,
+				5E8614A2260797D60083A331 /* TableReusableViewConfigurator.swift in Sources */,
 				5E13C0D52606D74C00240E69 /* CollectionReusableSupplementaryViewConfigurator.swift in Sources */,
+				5E86149E260797BF0083A331 /* TableReusableViewModelConfigurable.swift in Sources */,
 				5E8534DC26066D89000658F2 /* CollectionViewCellViewModelConfigurable.swift in Sources */,
 				5E85351026066FA0000658F2 /* TableViewCellViewModelConfigurable.swift in Sources */,
 				5E13C0D02606CBB900240E69 /* FeedWordTableViewCellViewModelProtocol.swift in Sources */,
