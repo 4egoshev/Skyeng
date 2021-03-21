@@ -11,7 +11,8 @@ import Foundation
 let templateNames = [
     "Service.xctemplate",
     "TableViewCell.xctemplate",
-    "CollectionViewCell.xctemplate"
+    "CollectionViewCell.xctemplate",
+    "CollectionReusableView.xctemplate"
 ]
 
 let arguments = CommandLine.arguments.dropFirst()

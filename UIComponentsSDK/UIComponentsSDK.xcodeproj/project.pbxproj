@@ -11,8 +11,8 @@
 		5E13C0CF2606CBB900240E69 /* FeedWordTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E13C0CC2606CBB900240E69 /* FeedWordTableViewCellViewModel.swift */; };
 		5E13C0D02606CBB900240E69 /* FeedWordTableViewCellViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E13C0CD2606CBB900240E69 /* FeedWordTableViewCellViewModelProtocol.swift */; };
 		5E13C0D52606D74C00240E69 /* CollectionReusableSupplementaryViewConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E13C0D42606D74C00240E69 /* CollectionReusableSupplementaryViewConfigurator.swift */; };
-		5E13C0DD2606D82700240E69 /* ReusableSupplementaryViewModelConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E13C0DC2606D82700240E69 /* ReusableSupplementaryViewModelConfigurable.swift */; };
-		5E13C0E12606D88600240E69 /* ReusableSupplementaryViewConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E13C0E02606D88600240E69 /* ReusableSupplementaryViewConfigurator.swift */; };
+		5E13C0DD2606D82700240E69 /* CollectionReusableSupplementaryViewModelConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E13C0DC2606D82700240E69 /* CollectionReusableSupplementaryViewModelConfigurable.swift */; };
+		5E13C0E12606D88600240E69 /* CollectionReusableSupplementaryViewConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E13C0E02606D88600240E69 /* CollectionReusableSupplementaryViewConfigurable.swift */; };
 		5E8533222606532E000658F2 /* UIComponentsSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E8533182606532E000658F2 /* UIComponentsSDK.framework */; };
 		5E8533272606532E000658F2 /* UIComponentsSDKTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8533262606532E000658F2 /* UIComponentsSDKTests.swift */; };
 		5E8533292606532E000658F2 /* UIComponentsSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = 5E85331B2606532E000658F2 /* UIComponentsSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -50,8 +50,8 @@
 		5E13C0CC2606CBB900240E69 /* FeedWordTableViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedWordTableViewCellViewModel.swift; sourceTree = "<group>"; };
 		5E13C0CD2606CBB900240E69 /* FeedWordTableViewCellViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedWordTableViewCellViewModelProtocol.swift; sourceTree = "<group>"; };
 		5E13C0D42606D74C00240E69 /* CollectionReusableSupplementaryViewConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionReusableSupplementaryViewConfigurator.swift; sourceTree = "<group>"; };
-		5E13C0DC2606D82700240E69 /* ReusableSupplementaryViewModelConfigurable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableSupplementaryViewModelConfigurable.swift; sourceTree = "<group>"; };
-		5E13C0E02606D88600240E69 /* ReusableSupplementaryViewConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableSupplementaryViewConfigurator.swift; sourceTree = "<group>"; };
+		5E13C0DC2606D82700240E69 /* CollectionReusableSupplementaryViewModelConfigurable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionReusableSupplementaryViewModelConfigurable.swift; sourceTree = "<group>"; };
+		5E13C0E02606D88600240E69 /* CollectionReusableSupplementaryViewConfigurable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionReusableSupplementaryViewConfigurable.swift; sourceTree = "<group>"; };
 		5E8533182606532E000658F2 /* UIComponentsSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UIComponentsSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E85331B2606532E000658F2 /* UIComponentsSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIComponentsSDK.h; sourceTree = "<group>"; };
 		5E85331C2606532E000658F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -115,8 +115,8 @@
 			isa = PBXGroup;
 			children = (
 				5E13C0D42606D74C00240E69 /* CollectionReusableSupplementaryViewConfigurator.swift */,
-				5E13C0E02606D88600240E69 /* ReusableSupplementaryViewConfigurator.swift */,
-				5E13C0DC2606D82700240E69 /* ReusableSupplementaryViewModelConfigurable.swift */,
+				5E13C0E02606D88600240E69 /* CollectionReusableSupplementaryViewConfigurable.swift */,
+				5E13C0DC2606D82700240E69 /* CollectionReusableSupplementaryViewModelConfigurable.swift */,
 			);
 			path = ReusableView;
 			sourceTree = "<group>";
@@ -139,6 +139,13 @@
 				5E85350F26066FA0000658F2 /* TableViewCellViewModelConfigurable.swift */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		5E13C0F62606DC6300240E69 /* ReusableView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ReusableView;
 			sourceTree = "<group>";
 		};
 		5E85330E2606532E000658F2 = {
@@ -258,6 +265,7 @@
 		5E86F6892606AFF700E27727 /* CollectionView */ = {
 			isa = PBXGroup;
 			children = (
+				5E13C0F62606DC6300240E69 /* ReusableView */,
 				5E86F6982606B08000E27727 /* Cell */,
 			);
 			path = CollectionView;
@@ -429,10 +437,10 @@
 				5E85350826066F76000658F2 /* TableViewDataDisplayManager.swift in Sources */,
 				5E8534D826066D5E000658F2 /* CollectionViewCellConfigurator.swift in Sources */,
 				5E8534D226066D45000658F2 /* CollectionViewDataDisplayManager.swift in Sources */,
-				5E13C0DD2606D82700240E69 /* ReusableSupplementaryViewModelConfigurable.swift in Sources */,
+				5E13C0DD2606D82700240E69 /* CollectionReusableSupplementaryViewModelConfigurable.swift in Sources */,
 				5E85334C260654A4000658F2 /* BaseViewController.swift in Sources */,
 				5E85352D260671D8000658F2 /* UITableView+Extensions.swift in Sources */,
-				5E13C0E12606D88600240E69 /* ReusableSupplementaryViewConfigurator.swift in Sources */,
+				5E13C0E12606D88600240E69 /* CollectionReusableSupplementaryViewConfigurable.swift in Sources */,
 				5E13C0CF2606CBB900240E69 /* FeedWordTableViewCellViewModel.swift in Sources */,
 				5E85351C26067024000658F2 /* CollectionViewCellConfigurable.swift in Sources */,
 			);

@@ -8,9 +8,9 @@
 
 import UIKit
 
-public class ___VARIABLE_productName:identifier___TableViewCell: UITableViewCell, Configurable {
+public class ___VARIABLE_productName:identifier___CollectionReusableView: UICollectionReusableView, Configurable {
     
-    public var viewModel: ___VARIABLE_productName:identifier___TableViewCellViewModelProtocol?
+    public var viewModel: ___VARIABLE_productName:identifier___CollectionReusableViewModelProtocol?
 
     public func bindUI() {
         
@@ -22,6 +22,6 @@ public class ___VARIABLE_productName:identifier___TableViewCell: UITableViewCell
 }
 
 //MARK: Setup
-private extension ___VARIABLE_productName:identifier___TableViewCell {
+private extension ___VARIABLE_productName:identifier___CollectionReusableView {
     
 }

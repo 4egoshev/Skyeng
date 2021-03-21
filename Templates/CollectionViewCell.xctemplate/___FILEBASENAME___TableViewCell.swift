@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class ___VARIABLE_productName:identifier___CollectionViewCell: UICollectionViewCell, CellConfigurable {
+public class ___VARIABLE_productName:identifier___CollectionViewCell: UICollectionViewCell, Configurable {
     
     public var viewModel: ___VARIABLE_productName:identifier___CollectionViewCellViewModelProtocol?
 
