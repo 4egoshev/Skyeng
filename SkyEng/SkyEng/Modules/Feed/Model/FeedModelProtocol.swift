@@ -6,11 +6,13 @@
 //  Copyright © 2021 SkyEng. All rights reserved.
 //
 
-import Foundation
+import ReactiveSwift
 
 protocol FeedModelProtocol {
 
-    var words: [Word] { get set }
+    var words: Property<[Word]> { get }
+
+    var error: Property<Error?> { get }
 
     var wordsService: WordsServiceProtocol { get }
 

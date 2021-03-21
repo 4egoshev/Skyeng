@@ -1,11 +1,13 @@
 PODS:
   - Alamofire (5.2.2)
+  - ReactiveSwift (6.6.0)
   - SnapKit (5.0.1)
   - SwiftLint (0.43.1)
   - Swinject (2.7.1)
 
 DEPENDENCIES:
   - Alamofire (~> 5.1)
+  - ReactiveSwift (~> 6.1)
   - SnapKit (~> 5.0.0)
   - SwiftLint (~> 0.43.1)
   - Swinject (~> 2.7.1)
@@ -13,16 +15,18 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - Alamofire
+    - ReactiveSwift
     - SnapKit
     - SwiftLint
     - Swinject
 
 SPEC CHECKSUMS:
   Alamofire: 814429acc853c6c54ff123fc3d2ef66803823ce0
+  ReactiveSwift: be9407e2aaf8a11e53a5229255693cffd9a63ccf
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
   SwiftLint: 99f82d07b837b942dd563c668de129a03fc3fb52
   Swinject: ddf78b8486dd9b71a667b852cad919ab4484478e
 
-PODFILE CHECKSUM: 816c8fbba38d119f3738b36db522a0c33fb97e2c
+PODFILE CHECKSUM: 139712f089974173f3b9dc4f6e1a7413bc6dae6b
 
 COCOAPODS: 1.10.1

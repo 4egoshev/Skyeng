@@ -28,37 +28,53 @@ class FeedViewModel: FeedViewModelProtocol {
 	}
 
     func viewDidLoad() {
+        bind()
         model.getSearch(text: "test", page: 0, pageSize: 15)
-        setupDataSource()
     }
 }
 
+// MARK: Bind
 private extension FeedViewModel {
-    func setupDataSource() {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-            self.headers = self.model.words.map {
+    func bind() {
+        model.words
+            .signal
+            .observeValues { [weak self] words in
+                self?.setupDataSource(with: words)
+            }
+
+        model.error
+            .signal
+            .observeValues { [weak self] error in
+                print(error?.localizedDescription)
+            }
+    }
+}
+
+// MARK: Setup
+private extension FeedViewModel {
+    func setupDataSource(with words: [Word]) {
+        headers = words.map {
 //                self.dataSource.append([SpacingTableViewCellViewModel()])
 
-                let attributes: [NSAttributedString.Key: Any] = [
-                    .font: UIFont.regular(size: 16),
-                    .foregroundColor: UIColor.black
-                ]
-                let text = $0.text + " " + "(\($0.meanings.count))"
-                let ratingAttributedText = NSMutableAttributedString(string: text, attributes: attributes)
+            let attributes: [NSAttributedString.Key: Any] = [
+                .font: UIFont.regular(size: 16),
+                .foregroundColor: UIColor.black
+            ]
+            let text = $0.text + " " + "(\($0.meanings.count))"
+            let ratingAttributedText = NSMutableAttributedString(string: text, attributes: attributes)
 
-                let range = NSString(string: $0.text).range(of: "test", options: .caseInsensitive)
-                ratingAttributedText.addAttribute(.font,
-                                                  value: UIFont.bold(size: 18),
-                                                  range: range)
+            let range = NSString(string: $0.text).range(of: "test", options: .caseInsensitive)
+            ratingAttributedText.addAttribute(.font,
+                                              value: UIFont.bold(size: 18),
+                                              range: range)
 
-                return FeedWordTableReusableViewModel(text: ratingAttributedText)
-            }
+            return FeedWordTableReusableViewModel(text: ratingAttributedText)
+        }
 
-            self.model.words.forEach { word in
-                self.dataSource.append(word.meanings.map {
-                    return FeedWordTableViewCellViewModel(text: $0.translation.text)
-                })
-            }
+        words.forEach { word in
+            dataSource.append(word.meanings.map {
+                return FeedWordTableViewCellViewModel(text: $0.translation.text)
+            })
         }
     }
 }

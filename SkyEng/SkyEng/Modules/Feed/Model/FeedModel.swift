@@ -6,11 +6,15 @@
 //  Copyright © 2021 SkyEng. All rights reserved.
 //
 
-import Foundation
+import ReactiveSwift
 
 class FeedModel: FeedModelProtocol {
 
-    var words: [Word] = []
+    var words: Property<[Word]> { Property(_words) }
+    private var _words: MutableProperty<[Word]> = MutableProperty([])
+
+    var error: Property<Error?> { Property(_error) }
+    private var _error: MutableProperty<Error?> = MutableProperty(nil)
 
     let wordsService: WordsServiceProtocol
 
@@ -20,9 +24,10 @@ class FeedModel: FeedModelProtocol {
 
     func getSearch(text: String, page: Int, pageSize: Int) {
         wordsService.getSearch(text: text, page: page, pageSize: pageSize) { [weak self] (object: [Word]) in
-            self?.words = object
+            self?._words.value = object
         } failure: { [weak self] (error) in
-            print(error)
+            self?._error.value = error
+//            print(error)
         }
     }
 }
