@@ -12,8 +12,14 @@ public class FeedWordTableViewCell: UITableViewCell, Configurable {
     
     private lazy var containerView: UIView = {
         let view = UIView()
-        view.backgroundColor = .red
+        view.backgroundColor = .white
+        view.layer.cornerRadius = 6
         return view
+    }()
+    
+    private lazy var translationLabel: UILabel = {
+        let label = UILabel()
+        return label
     }()
     
     public var viewModel: FeedWordTableViewCellViewModelProtocol?
@@ -23,8 +29,13 @@ public class FeedWordTableViewCell: UITableViewCell, Configurable {
     }
 
     public func setupUI() {
+        backgroundColor = .lightGray
+        selectionStyle = .none
+        
         contentView.addSubview(containerView)
+        containerView.addSubview(translationLabel)
         setupContainerView()
+        setupTranslationLabel()
     }
 }
 
@@ -34,7 +45,14 @@ private extension FeedWordTableViewCell {
         containerView.snp.makeConstraints {
             $0.left.top.equalToSuperview().offset(8)
             $0.right.bottom.equalToSuperview().offset(-8)
-            $0.height.equalTo(80)
+        }
+    }
+    
+    func setupTranslationLabel() {
+        translationLabel.text = viewModel?.text
+        translationLabel.snp.makeConstraints {
+            $0.left.top.equalToSuperview().offset(8)
+            $0.right.bottom.equalToSuperview().offset(-8)
         }
     }
 }

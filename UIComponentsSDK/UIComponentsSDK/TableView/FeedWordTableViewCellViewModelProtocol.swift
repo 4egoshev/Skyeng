@@ -10,4 +10,5 @@ import Foundation
 
 public protocol FeedWordTableViewCellViewModelProtocol: TableViewCellViewModelConfigurable {
         
+    var text: String { get }
 }

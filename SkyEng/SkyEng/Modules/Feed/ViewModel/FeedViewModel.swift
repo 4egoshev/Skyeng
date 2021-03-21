@@ -17,6 +17,8 @@ class FeedViewModel: FeedViewModelProtocol {
 
 	let model: FeedModelProtocol
 
+    private var openedSections: [Bool] = []
+
     private let router: FeedRouterProtocol
 
 	init(model: FeedModelProtocol,
@@ -35,7 +37,7 @@ private extension FeedViewModel {
     func setupDataSource() {
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
             self.headers = self.model.words.map {
-                self.dataSource.append([SpacingTableViewCellViewModel()])
+//                self.dataSource.append([SpacingTableViewCellViewModel()])
 
                 let attributes: [NSAttributedString.Key: Any] = [
                     .font: UIFont.regular(size: 16),
@@ -50,6 +52,12 @@ private extension FeedViewModel {
                                                   range: range)
 
                 return FeedWordTableReusableViewModel(text: ratingAttributedText)
+            }
+
+            self.model.words.forEach { word in
+                self.dataSource.append(word.meanings.map {
+                    return FeedWordTableViewCellViewModel(text: $0.translation.text)
+                })
             }
         }
     }

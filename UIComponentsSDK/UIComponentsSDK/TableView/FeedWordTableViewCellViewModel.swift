@@ -12,9 +12,11 @@ public typealias FeedWordTableViewCellConfigurator = TableViewCellConfigurator<F
 
 public struct FeedWordTableViewCellViewModel: FeedWordTableViewCellViewModelProtocol {
     
+    public var text: String
+    
     public var configurator: TableViewCellConfigurable = FeedWordTableViewCellConfigurator()
     
-    public init() {
-        
+    public init(text: String) {
+        self.text = text
     }
 }

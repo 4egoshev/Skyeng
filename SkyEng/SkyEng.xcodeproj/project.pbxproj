@@ -17,6 +17,7 @@
 		5E13C0A52606C1E000240E69 /* WordsServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E13C0A32606C1E000240E69 /* WordsServiceProtocol.swift */; };
 		5E13C0BC2606C58600240E69 /* Word.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E13C0BB2606C58600240E69 /* Word.swift */; };
 		5E3817112607B34A00C36A82 /* Meaning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3817102607B34A00C36A82 /* Meaning.swift */; };
+		5E3817232607BAF500C36A82 /* Translation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3817222607BAF500C36A82 /* Translation.swift */; };
 		5E85326826064EF5000658F2 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E85326726064EF5000658F2 /* Router.swift */; };
 		5E8533F226065B66000658F2 /* UIComponentsSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E8533F126065B66000658F2 /* UIComponentsSDK.framework */; };
 		5E8533F326065B66000658F2 /* UIComponentsSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5E8533F126065B66000658F2 /* UIComponentsSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -71,6 +72,7 @@
 		5E13C0A32606C1E000240E69 /* WordsServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordsServiceProtocol.swift; sourceTree = "<group>"; };
 		5E13C0BB2606C58600240E69 /* Word.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Word.swift; sourceTree = "<group>"; };
 		5E3817102607B34A00C36A82 /* Meaning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meaning.swift; sourceTree = "<group>"; };
+		5E3817222607BAF500C36A82 /* Translation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Translation.swift; sourceTree = "<group>"; };
 		5E85326726064EF5000658F2 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		5E85334226065458000658F2 /* UIComponentsSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = UIComponentsSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E8533472606545C000658F2 /* NetworkSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = NetworkSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -171,6 +173,7 @@
 			children = (
 				5E13C0BB2606C58600240E69 /* Word.swift */,
 				5E3817102607B34A00C36A82 /* Meaning.swift */,
+				5E3817222607BAF500C36A82 /* Translation.swift */,
 			);
 			path = Word;
 			sourceTree = "<group>";
@@ -504,6 +507,7 @@
 				5E3817112607B34A00C36A82 /* Meaning.swift in Sources */,
 				0EC807E8075F48B2C297CB0B /* FeedRouterProtocol.swift in Sources */,
 				91C2444AF6E925E275AD80DC /* FeedRouter.swift in Sources */,
+				5E3817232607BAF500C36A82 /* Translation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

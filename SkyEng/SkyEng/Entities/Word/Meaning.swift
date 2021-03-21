@@ -9,5 +9,11 @@
 import Foundation
 
 struct Meaning: Decodable {
-
+    var id: Int
+    var translation: Translation
+    var partOfSpeechCode: String
+    var previewUrl: String
+    var imageUrl: String
+    var soundUrl: String
+    var transcription: String
 }
