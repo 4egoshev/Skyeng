@@ -19,6 +19,7 @@ end
 
 def reacive
   pod 'ReactiveSwift', '~> 6.1'
+  pod 'ReactiveCocoa', '~> 11.2'
 end
 
 def network

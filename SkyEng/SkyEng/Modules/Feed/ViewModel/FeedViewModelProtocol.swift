@@ -7,8 +7,11 @@
 //
 
 import UIComponentsSDK
+import ReactiveSwift
 
 protocol FeedViewModelProtocol {
+
+    var reloadData: Signal<(), Never> { get }
 
     var headers: [TableReusableViewModelConfigurable] { get set }
 

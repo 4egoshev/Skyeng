@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5E05DBB22607CF030092CE3E /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E05DBB12607CF030092CE3E /* UIView+Extensions.swift */; };
 		5E13C0CE2606CBB900240E69 /* FeedWordTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E13C0CB2606CBB900240E69 /* FeedWordTableViewCell.swift */; };
 		5E13C0CF2606CBB900240E69 /* FeedWordTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E13C0CC2606CBB900240E69 /* FeedWordTableViewCellViewModel.swift */; };
 		5E13C0D02606CBB900240E69 /* FeedWordTableViewCellViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E13C0CD2606CBB900240E69 /* FeedWordTableViewCellViewModelProtocol.swift */; };
@@ -21,7 +22,6 @@
 		5E8533222606532E000658F2 /* UIComponentsSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E8533182606532E000658F2 /* UIComponentsSDK.framework */; };
 		5E8533272606532E000658F2 /* UIComponentsSDKTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8533262606532E000658F2 /* UIComponentsSDKTests.swift */; };
 		5E8533292606532E000658F2 /* UIComponentsSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = 5E85331B2606532E000658F2 /* UIComponentsSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5E85334C260654A4000658F2 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E85334B260654A4000658F2 /* BaseViewController.swift */; };
 		5E8534CB26066D01000658F2 /* Configurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8534CA26066D01000658F2 /* Configurable.swift */; };
 		5E8534D226066D45000658F2 /* CollectionViewDataDisplayManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8534D126066D45000658F2 /* CollectionViewDataDisplayManager.swift */; };
 		5E8534D826066D5E000658F2 /* CollectionViewCellConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8534D726066D5E000658F2 /* CollectionViewCellConfigurator.swift */; };
@@ -57,6 +57,7 @@
 		128E2CE6D7C45C831FAC7E4A /* Pods-UIComponentsSDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UIComponentsSDK.debug.xcconfig"; path = "Target Support Files/Pods-UIComponentsSDK/Pods-UIComponentsSDK.debug.xcconfig"; sourceTree = "<group>"; };
 		170D9A4A214B5576D543AC93 /* libPods-UIComponentsSDK.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-UIComponentsSDK.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		35C2B9C080DE7E2DD8A8BE6F /* Pods-UIComponentsSDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UIComponentsSDK.release.xcconfig"; path = "Target Support Files/Pods-UIComponentsSDK/Pods-UIComponentsSDK.release.xcconfig"; sourceTree = "<group>"; };
+		5E05DBB12607CF030092CE3E /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		5E13C0CB2606CBB900240E69 /* FeedWordTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedWordTableViewCell.swift; sourceTree = "<group>"; };
 		5E13C0CC2606CBB900240E69 /* FeedWordTableViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedWordTableViewCellViewModel.swift; sourceTree = "<group>"; };
 		5E13C0CD2606CBB900240E69 /* FeedWordTableViewCellViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedWordTableViewCellViewModelProtocol.swift; sourceTree = "<group>"; };
@@ -74,7 +75,6 @@
 		5E8533212606532E000658F2 /* UIComponentsSDKTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UIComponentsSDKTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E8533262606532E000658F2 /* UIComponentsSDKTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIComponentsSDKTests.swift; sourceTree = "<group>"; };
 		5E8533282606532E000658F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5E85334B260654A4000658F2 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		5E8534CA26066D01000658F2 /* Configurable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configurable.swift; sourceTree = "<group>"; };
 		5E8534D126066D45000658F2 /* CollectionViewDataDisplayManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewDataDisplayManager.swift; sourceTree = "<group>"; };
 		5E8534D726066D5E000658F2 /* CollectionViewCellConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCellConfigurator.swift; sourceTree = "<group>"; };
@@ -235,7 +235,6 @@
 			children = (
 				5E85353D2606778A000658F2 /* Protocols */,
 				5E85352B260671BD000658F2 /* Extensions */,
-				5E8535232606710C000658F2 /* Base */,
 				5E8534C926066CE3000658F2 /* DDM */,
 				5E86F6892606AFF700E27727 /* CollectionView */,
 				5E86F6882606AFE900E27727 /* TableView */,
@@ -283,14 +282,6 @@
 			path = TableViewDDM;
 			sourceTree = "<group>";
 		};
-		5E8535232606710C000658F2 /* Base */ = {
-			isa = PBXGroup;
-			children = (
-				5E85334B260654A4000658F2 /* BaseViewController.swift */,
-			);
-			path = Base;
-			sourceTree = "<group>";
-		};
 		5E8535262606711B000658F2 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -303,6 +294,7 @@
 		5E85352B260671BD000658F2 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				5E05DBB12607CF030092CE3E /* UIView+Extensions.swift */,
 				5E85352C260671D8000658F2 /* UITableView+Extensions.swift */,
 				5E853537260673C5000658F2 /* UICollectionView+Extensions.swift */,
 				5E38170C2607B27200C36A82 /* UIFont+Extensions.swift */,
@@ -520,9 +512,9 @@
 				5E8534D826066D5E000658F2 /* CollectionViewCellConfigurator.swift in Sources */,
 				5E8534D226066D45000658F2 /* CollectionViewDataDisplayManager.swift in Sources */,
 				5E13C0DD2606D82700240E69 /* CollectionReusableSupplementaryViewModelConfigurable.swift in Sources */,
-				5E85334C260654A4000658F2 /* BaseViewController.swift in Sources */,
 				5E3817142607B4F800C36A82 /* UIViewController+Extensions.swift in Sources */,
 				5E85352D260671D8000658F2 /* UITableView+Extensions.swift in Sources */,
+				5E05DBB22607CF030092CE3E /* UIView+Extensions.swift in Sources */,
 				5E38171F2607B5AB00C36A82 /* SpacingTableViewCellViewModelProtocol.swift in Sources */,
 				5E13C0E12606D88600240E69 /* CollectionReusableSupplementaryViewConfigurable.swift in Sources */,
 				5E13C0CF2606CBB900240E69 /* FeedWordTableViewCellViewModel.swift in Sources */,

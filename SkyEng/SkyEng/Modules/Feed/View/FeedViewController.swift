@@ -8,6 +8,8 @@
 
 import UIKit
 import UIComponentsSDK
+import ReactiveSwift
+import ReactiveCocoa
 
 class FeedViewController: BaseViewController {
 
@@ -38,8 +40,8 @@ class FeedViewController: BaseViewController {
 		viewModel.viewDidLoad()
     }
 
-	override func bindUI() {
-
+    override func bindUI() {
+        tableView.reactive.reloadData <~ viewModel.reloadData
 	}
 
 	override func setupUI() {
@@ -54,10 +56,6 @@ private extension FeedViewController {
         view.addSubview(tableView)
         tableView.snp.makeConstraints {
             $0.edges.equalToSuperview()
-        }
-
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
-            self.tableView.reloadData()
         }
     }
 }

@@ -8,8 +8,12 @@
 
 import UIKit
 import UIComponentsSDK
+import ReactiveSwift
 
 class FeedViewModel: FeedViewModelProtocol {
+
+    var reloadData: Signal<(), Never>
+    private var reloadDataObserver: Signal<(), Never>.Observer
 
     var headers: [TableReusableViewModelConfigurable] = []
 
@@ -25,6 +29,8 @@ class FeedViewModel: FeedViewModelProtocol {
 		 router: FeedRouterProtocol) {
 		self.model = model
 		self.router = router
+
+        (reloadData, reloadDataObserver) = Signal.pipe()
 	}
 
     func viewDidLoad() {
@@ -40,6 +46,7 @@ private extension FeedViewModel {
             .signal
             .observeValues { [weak self] words in
                 self?.setupDataSource(with: words)
+                self?.reloadDataObserver.send(value: ())
             }
 
         model.error
