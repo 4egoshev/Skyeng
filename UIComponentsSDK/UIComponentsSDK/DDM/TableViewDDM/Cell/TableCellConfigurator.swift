@@ -10,10 +10,6 @@ import UIKit
 
 public struct TableViewCellConfigurator<CellType: Configurable, ViewModel>: TableViewCellConfigurable where CellType.ViewModel == ViewModel, CellType: UITableViewCell {
 
-    public var reuseId: String {
-        String(describing: CellType.self)
-    }
-
     public func configure(cell tableView: UITableView, viewModel: TableViewCellViewModelConfigurable) -> UITableViewCell {
         var cell = tableView.dequeueCell(with: CellType.self)
         cell.configure(viewModel as? ViewModel)

@@ -9,8 +9,8 @@
 import UIKit
 
 public protocol CollectionReusableSupplementaryViewConfigurable {
-
-    var reuseId: String { get }
-
-    func configureReusableSupplementaryView(_ collectionView: UICollectionView, ofKind: String, indexPath: IndexPath, viewModel: CollectionReusableSupplementaryViewModelConfigurable) -> UICollectionReusableView
+    
+    func configureHeader(_ collectionView: UICollectionView, indexPath: IndexPath, viewModel: CollectionReusableSupplementaryViewModelConfigurable) -> UICollectionReusableView
+    
+    func configureFooter(_ collectionView: UICollectionView, indexPath: IndexPath, viewModel: CollectionReusableSupplementaryViewModelConfigurable) -> UICollectionReusableView
 }

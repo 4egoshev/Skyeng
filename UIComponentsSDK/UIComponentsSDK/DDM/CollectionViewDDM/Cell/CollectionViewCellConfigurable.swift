@@ -10,7 +10,5 @@ import UIKit
 
 public protocol CollectionViewCellConfigurable {
 
-    var reuseId: String { get }
-
     func configure(cell collectionView: UICollectionView, indexPath: IndexPath, viewModel: CollectionViewCellViewModelConfigurable) -> UICollectionViewCell
 }

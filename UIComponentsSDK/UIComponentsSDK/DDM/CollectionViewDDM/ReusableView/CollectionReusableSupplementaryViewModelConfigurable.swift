@@ -12,15 +12,21 @@ public protocol CollectionReusableSupplementaryViewModelConfigurable {
     
     var configurator: CollectionReusableSupplementaryViewConfigurable { get }
     
-    func dequeue(collectionView: UICollectionView, of kind: String, for indexPath: IndexPath) -> UICollectionReusableView
+    func dequeueHeader(collectionView: UICollectionView, for indexPath: IndexPath) -> UICollectionReusableView
+    
+    func dequeueFooter(collectionView: UICollectionView, for indexPath: IndexPath) -> UICollectionReusableView
     
     func sizeForItem(_ collectionView: UICollectionView) -> CGSize
 }
 
 public extension CollectionReusableSupplementaryViewModelConfigurable {
     
-    func dequeue(collectionView: UICollectionView, of kind: String, for indexPath: IndexPath) -> UICollectionReusableView {
-        configurator.configureReusableSupplementaryView(collectionView, ofKind: kind, indexPath: indexPath, viewModel: self)
+    func dequeueHeader(collectionView: UICollectionView, for indexPath: IndexPath) -> UICollectionReusableView {
+        configurator.configureHeader(collectionView, indexPath: indexPath, viewModel: self)
+    }
+    
+    func dequeueFooter(collectionView: UICollectionView, for indexPath: IndexPath) -> UICollectionReusableView {
+        configurator.configureFooter(collectionView, indexPath: indexPath, viewModel: self)
     }
     
     func sizeForItem(_ collectionView: UICollectionView) -> CGSize {

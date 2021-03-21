@@ -10,7 +10,5 @@ import UIKit
 
 public protocol TableViewCellConfigurable {
 
-    var reuseId: String { get }
-
     func configure(cell tableView: UITableView, viewModel: TableViewCellViewModelConfigurable) -> UITableViewCell
 }

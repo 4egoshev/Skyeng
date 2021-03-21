@@ -18,11 +18,23 @@ public extension UICollectionView {
         cellTypes.forEach { register(cellType: $0) }
     }
     
+    func register<T: UICollectionReusableView>(view: T.Type, of kind: String) {
+        register(T.self, forSupplementaryViewOfKind: kind, withReuseIdentifier: T.className)
+    }
+    
     func dequeueCell<T: UICollectionViewCell>(with type: T.Type, for indexPath: IndexPath) -> T {
         if let cell = dequeueReusableCell(withReuseIdentifier: type.className, for: indexPath) as? T {
             return cell
         }
         register(cellType: type)
         return dequeueReusableCell(withReuseIdentifier: type.className, for: indexPath) as! T
+    }
+    
+    func dequeue<T: UICollectionReusableView>(view: T.Type, of kind: String, for indexPath: IndexPath) -> T {
+        if let view = dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: T.className, for: indexPath) as? T {
+            return view
+        }
+        register(view: view, of: kind)
+        return dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: T.className, for: indexPath) as! T
     }
 }

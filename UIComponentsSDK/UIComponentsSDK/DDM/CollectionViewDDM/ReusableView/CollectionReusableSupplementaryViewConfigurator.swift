@@ -8,11 +8,16 @@
 
 import UIKit
 
-public struct CollectionReusableSupplementaryViewConfigurator<ReusableSupplementaryViewType: Configurable, ViewModel>: CollectionReusableSupplementaryViewConfigurable where ReusableSupplementaryViewType.ViewModel == ViewModel, ReusableSupplementaryViewType: UICollectionReusableView {
-    public var reuseId: String { return String(describing: ReusableSupplementaryViewType.self) }
-
-    public func configureReusableSupplementaryView(_ collectionView: UICollectionView, ofKind: String, indexPath: IndexPath, viewModel: CollectionReusableSupplementaryViewModelConfigurable) -> UICollectionReusableView {
-        var view = collectionView.dequeueReusableSupplementaryView(ofKind: ofKind, withReuseIdentifier: reuseId, for: indexPath) as! ReusableSupplementaryViewType
+public struct CollectionReusableSupplementaryViewConfigurator<ViewType: Configurable, ViewModel>: CollectionReusableSupplementaryViewConfigurable where ViewType.ViewModel == ViewModel, ViewType: UICollectionReusableView {
+    
+    public func configureHeader(_ collectionView: UICollectionView, indexPath: IndexPath, viewModel: CollectionReusableSupplementaryViewModelConfigurable) -> UICollectionReusableView {
+        var view = collectionView.dequeue(view: ViewType.self, of: UICollectionView.elementKindSectionHeader, for: indexPath)
+        view.configure(viewModel as? ViewModel)
+        return view
+    }
+    
+    public func configureFooter(_ collectionView: UICollectionView, indexPath: IndexPath, viewModel: CollectionReusableSupplementaryViewModelConfigurable) -> UICollectionReusableView {
+        var view = collectionView.dequeue(view: ViewType.self, of: UICollectionView.elementKindSectionFooter, for: indexPath)
         view.configure(viewModel as? ViewModel)
         return view
     }
