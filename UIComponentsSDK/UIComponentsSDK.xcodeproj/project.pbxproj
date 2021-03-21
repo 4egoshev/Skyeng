@@ -14,6 +14,10 @@
 		5E13C0DD2606D82700240E69 /* CollectionReusableSupplementaryViewModelConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E13C0DC2606D82700240E69 /* CollectionReusableSupplementaryViewModelConfigurable.swift */; };
 		5E13C0E12606D88600240E69 /* CollectionReusableSupplementaryViewConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E13C0E02606D88600240E69 /* CollectionReusableSupplementaryViewConfigurable.swift */; };
 		5E38170D2607B27200C36A82 /* UIFont+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E38170C2607B27200C36A82 /* UIFont+Extensions.swift */; };
+		5E3817142607B4F800C36A82 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3817132607B4F800C36A82 /* UIViewController+Extensions.swift */; };
+		5E38171D2607B5AB00C36A82 /* SpacingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E38171A2607B5AB00C36A82 /* SpacingTableViewCell.swift */; };
+		5E38171E2607B5AB00C36A82 /* SpacingTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E38171B2607B5AB00C36A82 /* SpacingTableViewCellViewModel.swift */; };
+		5E38171F2607B5AB00C36A82 /* SpacingTableViewCellViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E38171C2607B5AB00C36A82 /* SpacingTableViewCellViewModelProtocol.swift */; };
 		5E8533222606532E000658F2 /* UIComponentsSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E8533182606532E000658F2 /* UIComponentsSDK.framework */; };
 		5E8533272606532E000658F2 /* UIComponentsSDKTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8533262606532E000658F2 /* UIComponentsSDKTests.swift */; };
 		5E8533292606532E000658F2 /* UIComponentsSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = 5E85331B2606532E000658F2 /* UIComponentsSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -60,6 +64,10 @@
 		5E13C0DC2606D82700240E69 /* CollectionReusableSupplementaryViewModelConfigurable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionReusableSupplementaryViewModelConfigurable.swift; sourceTree = "<group>"; };
 		5E13C0E02606D88600240E69 /* CollectionReusableSupplementaryViewConfigurable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionReusableSupplementaryViewConfigurable.swift; sourceTree = "<group>"; };
 		5E38170C2607B27200C36A82 /* UIFont+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extensions.swift"; sourceTree = "<group>"; };
+		5E3817132607B4F800C36A82 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
+		5E38171A2607B5AB00C36A82 /* SpacingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpacingTableViewCell.swift; sourceTree = "<group>"; };
+		5E38171B2607B5AB00C36A82 /* SpacingTableViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpacingTableViewCellViewModel.swift; sourceTree = "<group>"; };
+		5E38171C2607B5AB00C36A82 /* SpacingTableViewCellViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpacingTableViewCellViewModelProtocol.swift; sourceTree = "<group>"; };
 		5E8533182606532E000658F2 /* UIComponentsSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UIComponentsSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E85331B2606532E000658F2 /* UIComponentsSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIComponentsSDK.h; sourceTree = "<group>"; };
 		5E85331C2606532E000658F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -172,6 +180,36 @@
 			path = ReusableView;
 			sourceTree = "<group>";
 		};
+		5E3817172607B57E00C36A82 /* FeedWord */ = {
+			isa = PBXGroup;
+			children = (
+				5E13C0CB2606CBB900240E69 /* FeedWordTableViewCell.swift */,
+				5E13C0CC2606CBB900240E69 /* FeedWordTableViewCellViewModel.swift */,
+				5E13C0CD2606CBB900240E69 /* FeedWordTableViewCellViewModelProtocol.swift */,
+			);
+			name = FeedWord;
+			sourceTree = "<group>";
+		};
+		5E3817182607B58900C36A82 /* FeedWord */ = {
+			isa = PBXGroup;
+			children = (
+				5E8614FF2607A6920083A331 /* FeedWordTableReusableView.swift */,
+				5E8615002607A6920083A331 /* FeedWordTableReusableViewModel.swift */,
+				5E8614FE2607A6920083A331 /* FeedWordTableReusableViewModelProtocol.swift */,
+			);
+			name = FeedWord;
+			sourceTree = "<group>";
+		};
+		5E3817192607B59400C36A82 /* Spacing */ = {
+			isa = PBXGroup;
+			children = (
+				5E38171A2607B5AB00C36A82 /* SpacingTableViewCell.swift */,
+				5E38171B2607B5AB00C36A82 /* SpacingTableViewCellViewModel.swift */,
+				5E38171C2607B5AB00C36A82 /* SpacingTableViewCellViewModelProtocol.swift */,
+			);
+			name = Spacing;
+			sourceTree = "<group>";
+		};
 		5E85330E2606532E000658F2 = {
 			isa = PBXGroup;
 			children = (
@@ -268,6 +306,7 @@
 				5E85352C260671D8000658F2 /* UITableView+Extensions.swift */,
 				5E853537260673C5000658F2 /* UICollectionView+Extensions.swift */,
 				5E38170C2607B27200C36A82 /* UIFont+Extensions.swift */,
+				5E3817132607B4F800C36A82 /* UIViewController+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -283,9 +322,7 @@
 		5E8614A726079E190083A331 /* ReusableView */ = {
 			isa = PBXGroup;
 			children = (
-				5E8614FF2607A6920083A331 /* FeedWordTableReusableView.swift */,
-				5E8615002607A6920083A331 /* FeedWordTableReusableViewModel.swift */,
-				5E8614FE2607A6920083A331 /* FeedWordTableReusableViewModelProtocol.swift */,
+				5E3817182607B58900C36A82 /* FeedWord */,
 			);
 			name = ReusableView;
 			sourceTree = "<group>";
@@ -311,9 +348,8 @@
 		5E86F68A2606B00700E27727 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				5E13C0CB2606CBB900240E69 /* FeedWordTableViewCell.swift */,
-				5E13C0CC2606CBB900240E69 /* FeedWordTableViewCellViewModel.swift */,
-				5E13C0CD2606CBB900240E69 /* FeedWordTableViewCellViewModelProtocol.swift */,
+				5E3817192607B59400C36A82 /* Spacing */,
+				5E3817172607B57E00C36A82 /* FeedWord */,
 			);
 			name = Cell;
 			sourceTree = "<group>";
@@ -466,6 +502,7 @@
 				5E86149A2607979A0083A331 /* TableReusableViewConfigurable.swift in Sources */,
 				5E13C0CE2606CBB900240E69 /* FeedWordTableViewCell.swift in Sources */,
 				5E8534CB26066D01000658F2 /* Configurable.swift in Sources */,
+				5E38171D2607B5AB00C36A82 /* SpacingTableViewCell.swift in Sources */,
 				5E85351426066FAF000658F2 /* TableViewCellConfigurable.swift in Sources */,
 				5E85353F26067796000658F2 /* ClassNameProtocol.swift in Sources */,
 				5E85350C26066F8B000658F2 /* TableCellConfigurator.swift in Sources */,
@@ -474,6 +511,7 @@
 				5E38170D2607B27200C36A82 /* UIFont+Extensions.swift in Sources */,
 				5E13C0D52606D74C00240E69 /* CollectionReusableSupplementaryViewConfigurator.swift in Sources */,
 				5E86149E260797BF0083A331 /* TableReusableViewModelConfigurable.swift in Sources */,
+				5E38171E2607B5AB00C36A82 /* SpacingTableViewCellViewModel.swift in Sources */,
 				5E8534DC26066D89000658F2 /* CollectionViewCellViewModelConfigurable.swift in Sources */,
 				5E85351026066FA0000658F2 /* TableViewCellViewModelConfigurable.swift in Sources */,
 				5E13C0D02606CBB900240E69 /* FeedWordTableViewCellViewModelProtocol.swift in Sources */,
@@ -483,7 +521,9 @@
 				5E8534D226066D45000658F2 /* CollectionViewDataDisplayManager.swift in Sources */,
 				5E13C0DD2606D82700240E69 /* CollectionReusableSupplementaryViewModelConfigurable.swift in Sources */,
 				5E85334C260654A4000658F2 /* BaseViewController.swift in Sources */,
+				5E3817142607B4F800C36A82 /* UIViewController+Extensions.swift in Sources */,
 				5E85352D260671D8000658F2 /* UITableView+Extensions.swift in Sources */,
+				5E38171F2607B5AB00C36A82 /* SpacingTableViewCellViewModelProtocol.swift in Sources */,
 				5E13C0E12606D88600240E69 /* CollectionReusableSupplementaryViewConfigurable.swift in Sources */,
 				5E13C0CF2606CBB900240E69 /* FeedWordTableViewCellViewModel.swift in Sources */,
 				5E85351C26067024000658F2 /* CollectionViewCellConfigurable.swift in Sources */,

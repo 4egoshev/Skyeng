@@ -29,6 +29,7 @@ class AppCoordinator: AppCoordinatorProtocol {
         let controller = assembler.resolver
             .resolve(FeedAssemblyProtocol.self)?
             .make()
+            .embeded()
         window?.rootViewController = controller
         window?.makeKeyAndVisible()
     }

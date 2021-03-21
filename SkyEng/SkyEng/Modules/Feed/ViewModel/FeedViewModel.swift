@@ -35,7 +35,7 @@ private extension FeedViewModel {
     func setupDataSource() {
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
             self.headers = self.model.words.map {
-                self.dataSource.append([FeedWordTableViewCellViewModel()])
+                self.dataSource.append([SpacingTableViewCellViewModel()])
 
                 let attributes: [NSAttributedString.Key: Any] = [
                     .font: UIFont.regular(size: 16),

@@ -23,7 +23,7 @@ public class FeedWordTableReusableView: UITableViewHeaderFooterView, Configurabl
     }
 
     public func setupUI() {
-        contentView.backgroundColor = .yellow
+        contentView.backgroundColor = .white
         setupLabel()
     }
 }
