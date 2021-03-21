@@ -10,5 +10,16 @@ import Foundation
 
 protocol FeedModelProtocol {
 
+    var words: [Word] { get set }
+
     var wordsService: WordsServiceProtocol { get }
+
+    func getSearch(text: String, page: Int, pageSize: Int)
+}
+
+extension FeedModelProtocol {
+
+    func getSearch(text: String = "", page: Int = 0, pageSize: Int = 15) {
+        getSearch(text: text, page: page, pageSize: pageSize)
+    }
 }

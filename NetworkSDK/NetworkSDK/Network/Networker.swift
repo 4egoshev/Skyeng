@@ -8,7 +8,7 @@
 
 import Alamofire
 
-public typealias Response<T> = Result<T, AFError>
+public typealias Response<T> = Result<[T], AFError>
 
 public protocol NetworkerProtocol {
     func request<T: Decodable>(_ urlRequest: URLRequestConvertible,
@@ -46,7 +46,7 @@ public class Networker: NetworkerProtocol {
     
     public func request<T: Decodable>(_ urlRequest: URLRequestConvertible,
                                       completion: @escaping (Response<T>) -> Void) {
-        session.request(urlRequest).validate().responseDecodable { (response: AFDataResponse<T>) in
+        session.request(urlRequest).validate().responseDecodable { (response: AFDataResponse<[T]>) in
             completion(response.result)
         }
     }

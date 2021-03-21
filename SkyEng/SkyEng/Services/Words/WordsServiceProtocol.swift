@@ -9,11 +9,11 @@
 import Foundation
 
 protocol WordsServiceProtocol {
-    func getModel<T: Decodable>(search: String, page: Int, pageSize: Int, success: @escaping (T) -> Void, failure: ((Error) -> Void)?)
+    func getSearch<T: Decodable>(text: String, page: Int, pageSize: Int, success: @escaping ([T]) -> Void, failure: ((Error) -> Void)?)
 }
 
 extension WordsServiceProtocol {
-    func getModel<T: Decodable>(search: String = "", page: Int = 0, pageSize: Int = 15, success: @escaping (T) -> Void, failure: ((Error) -> Void)?) {
-        getModel(search: search, page: page, pageSize: pageSize, success: success, failure: failure)
+    func getSearch<T: Decodable>(text: String = "", page: Int = 0, pageSize: Int = 15, success: @escaping ([T]) -> Void, failure: ((Error) -> Void)?) {
+        getSearch(text: text, page: page, pageSize: pageSize, success: success, failure: failure)
     }
 }

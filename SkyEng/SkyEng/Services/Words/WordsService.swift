@@ -18,8 +18,8 @@ final class WordsService {
 }
 
 extension WordsService: WordsServiceProtocol {
-    func getModel<T: Decodable>(search: String, page: Int, pageSize: Int, success: @escaping (T) -> Void, failure: ((Error) -> Void)? = nil) {
-        let params = SearhParameters(search: search, page: page, pageSize: pageSize)
+    func getSearch<T: Decodable>(text: String, page: Int, pageSize: Int, success: @escaping ([T]) -> Void, failure: ((Error) -> Void)? = nil) {
+        let params = SearhParameters(search: text, page: page, pageSize: pageSize)
         let request = WordsRequest.getSerch(parameters: params)
         networker.request(request) { (response: Response<T>) in
             switch response {

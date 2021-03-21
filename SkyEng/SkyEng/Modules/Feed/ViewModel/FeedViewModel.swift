@@ -23,6 +23,6 @@ class FeedViewModel: FeedViewModelProtocol {
 	}
 
     func viewDidLoad() {
-
+        model.getSearch(text: "new", page: 0, pageSize: 15)
     }
 }
