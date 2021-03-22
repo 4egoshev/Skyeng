@@ -19,6 +19,8 @@ class FeedViewController: BaseViewController {
         tableView.delegate = self
         tableView.separatorStyle = .none
         tableView.backgroundColor = .white
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.estimatedRowHeight = UITableView.automaticDimension
 
         tableView.tableHeaderView = searchController.searchBar
 
@@ -112,12 +114,17 @@ extension FeedViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         viewModel.headers[section].height
     }
+
+    func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+        viewModel.willDisplayHeader(at: section)
+    }
 }
 
 // MARK: UISearchResultsUpdating
 extension FeedViewController: UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
-        viewModel.searchtext = searchController.searchBar.text
+        guard let text = searchController.searchBar.text else { return }
+        viewModel.searchtext = text
     }
 
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {

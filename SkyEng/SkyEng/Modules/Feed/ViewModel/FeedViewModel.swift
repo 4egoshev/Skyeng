@@ -21,9 +21,9 @@ class FeedViewModel: FeedViewModelProtocol {
     var deleteRows: Signal<[IndexPath], Never>
     private let deleteRowsObserver: Signal<[IndexPath], Never>.Observer
 
-    var searchtext: String? {
+    var searchtext: String = "" {
         didSet {
-            getSearch(text: searchtext ?? "")
+            getSearch(text: searchtext)
         }
     }
 
@@ -34,8 +34,11 @@ class FeedViewModel: FeedViewModelProtocol {
 	let model: FeedModelProtocol
 
     private var openedSections: [Bool] = []
-    private var didTapOpen: Bool = false
     private var indexPaths: [IndexPath]?
+
+    private var isLastPage = false
+    private var isLoading = false
+    private var pageSize = 40
 
     private let router: FeedRouterProtocol
 
@@ -54,8 +57,10 @@ class FeedViewModel: FeedViewModelProtocol {
         getSearch()
     }
 
-    private func getSearch(text: String = "", page: Int = 0, pageSize: Int = 15) {
-        model.getSearch(text: text, page: 0, pageSize: 15)
+    func willDisplayHeader(at section: Int) {
+        guard !isLastPage, !isLoading, section > headers.count - pageSize / 2 else { return }
+        isLoading = true
+        getSearch(text: searchtext, page: headers.count / pageSize)
     }
 }
 
@@ -64,9 +69,10 @@ private extension FeedViewModel {
     func bind() {
         model.words
             .signal
-
             .observeValues { [weak self] words in
                 guard let self = self else { return }
+
+                self.isLoading = false
                 self.setupDataSource(with: words)
 
                 if let indexPaths = self.indexPaths, let section = indexPaths.first?.section {
@@ -77,6 +83,13 @@ private extension FeedViewModel {
                     self.reloadDataObserver.send(value: ())
                 }
                 self.indexPaths = nil
+            }
+
+        model.pageSize
+            .signal
+            .observeValues { [weak self] size in
+                guard let self = self else { return }
+                self.isLastPage = size == 0 || size % self.pageSize != 0
             }
 
         model.error
@@ -109,7 +122,7 @@ private extension FeedViewModel {
             let text = word.text + " " + "(\(word.meanings.count))"
             let ratingAttributedText = NSMutableAttributedString(string: text, attributes: attributes)
 
-            let range = NSString(string: word.text).range(of: searchtext ?? "", options: .caseInsensitive)
+            let range = NSString(string: word.text).range(of: searchtext, options: .caseInsensitive)
             ratingAttributedText.addAttribute(.font,
                                               value: UIFont.bold(size: 18),
                                               range: range)
@@ -123,5 +136,12 @@ private extension FeedViewModel {
 
             return viewModel
         }
+    }
+}
+
+// MARK: Request
+private extension FeedViewModel {
+    func getSearch(text: String = "", page: Int = 0, pageSize: Int = 40) {
+        model.getSearch(text: text, page: page, pageSize: pageSize)
     }
 }

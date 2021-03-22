@@ -17,7 +17,7 @@ protocol FeedViewModelProtocol {
 
     var deleteRows: Signal<[IndexPath], Never> { get }
 
-    var searchtext: String? { get set }
+    var searchtext: String { get set }
 
     var headers: [TableReusableViewModelConfigurable] { get set }
 
@@ -26,4 +26,6 @@ protocol FeedViewModelProtocol {
 	var model: FeedModelProtocol { get }
 
 	func viewDidLoad()
+
+    func willDisplayHeader(at section: Int)
 }

@@ -12,6 +12,8 @@ protocol FeedModelProtocol {
 
     var words: Property<[FeedWord]> { get }
 
+    var pageSize: Property<Int> { get }
+
     var error: Property<Error?> { get }
 
     var wordsService: WordsServiceProtocol { get }
