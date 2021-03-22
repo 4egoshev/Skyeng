@@ -102,7 +102,7 @@ private extension FeedViewModel {
             .signal
             .observeValues { [weak self] error in
                 guard let self = self else { return }
-                print(error?.localizedDescription)
+                self.router.showError(error)
             }
 
         loading

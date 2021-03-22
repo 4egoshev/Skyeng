@@ -8,6 +8,6 @@
 
 import UIKit
 
-protocol FeedRouterProtocol: Router {
+protocol FeedRouterProtocol: Router, ErrorRoutable, PlaceholderRoutalble {
 
 }

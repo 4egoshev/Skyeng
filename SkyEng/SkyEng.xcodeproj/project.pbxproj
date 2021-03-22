@@ -21,6 +21,8 @@
 		5E3817232607BAF500C36A82 /* Translation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3817222607BAF500C36A82 /* Translation.swift */; };
 		5E5711AE26085596002929BD /* AlertRoutable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5711AD26085596002929BD /* AlertRoutable.swift */; };
 		5E5711B126085636002929BD /* ErrorRoutable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5711B026085636002929BD /* ErrorRoutable.swift */; };
+		5E5711B42608569D002929BD /* PlaceholderRoutalble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5711B32608569D002929BD /* PlaceholderRoutalble.swift */; };
+		5E5711B7260857B7002929BD /* PlaceholderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5711B6260857B7002929BD /* PlaceholderViewController.swift */; };
 		5E701B472607EC8800C02FCD /* FeedWord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E701B462607EC8800C02FCD /* FeedWord.swift */; };
 		5E701B4F2607F36A00C02FCD /* Reactive+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E701B4E2607F36A00C02FCD /* Reactive+Extensions.swift */; };
 		5E85326826064EF5000658F2 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E85326726064EF5000658F2 /* Router.swift */; };
@@ -81,6 +83,8 @@
 		5E3817222607BAF500C36A82 /* Translation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Translation.swift; sourceTree = "<group>"; };
 		5E5711AD26085596002929BD /* AlertRoutable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertRoutable.swift; sourceTree = "<group>"; };
 		5E5711B026085636002929BD /* ErrorRoutable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorRoutable.swift; sourceTree = "<group>"; };
+		5E5711B32608569D002929BD /* PlaceholderRoutalble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderRoutalble.swift; sourceTree = "<group>"; };
+		5E5711B6260857B7002929BD /* PlaceholderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderViewController.swift; sourceTree = "<group>"; };
 		5E701B462607EC8800C02FCD /* FeedWord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedWord.swift; sourceTree = "<group>"; };
 		5E701B4E2607F36A00C02FCD /* Reactive+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Reactive+Extensions.swift"; sourceTree = "<group>"; };
 		5E85326726064EF5000658F2 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
@@ -157,6 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				5E05DBAB2607CE960092CE3E /* BaseViewController.swift */,
+				5E5711B6260857B7002929BD /* PlaceholderViewController.swift */,
 				5E701B4C2607F35500C02FCD /* Extensions */,
 			);
 			path = Common;
@@ -211,6 +216,7 @@
 				5E85326726064EF5000658F2 /* Router.swift */,
 				5E5711AD26085596002929BD /* AlertRoutable.swift */,
 				5E5711B026085636002929BD /* ErrorRoutable.swift */,
+				5E5711B32608569D002929BD /* PlaceholderRoutalble.swift */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -520,7 +526,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				5E701B4F2607F36A00C02FCD /* Reactive+Extensions.swift in Sources */,
+				5E5711B7260857B7002929BD /* PlaceholderViewController.swift in Sources */,
 				5EF3A3BD2605771A00B240EC /* AppCoordinator.swift in Sources */,
+				5E5711B42608569D002929BD /* PlaceholderRoutalble.swift in Sources */,
 				5ECF3233260568C0007EC2BB /* AppDelegate.swift in Sources */,
 				5EF3A3C9260578E100B240EC /* Assembler+Extention.swift in Sources */,
 				5E86F6B72606B1AD00E27727 /* ServiceAssembly.swift in Sources */,

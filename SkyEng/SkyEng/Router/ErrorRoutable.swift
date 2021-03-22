@@ -9,13 +9,14 @@
 import Foundation
 
 protocol ErrorRoutable {
-    func showError(_ error: Error)
+    func showError(_ error: Error?)
 }
 
-extension Router where Self: Error {
-    func showError(_ error: Error) {
+extension Router where Self: ErrorRoutable {
+    func showError(_ error: Error?) {
+        guard let error = error else { return }
         DispatchQueue.main.async {
-            //TODO: Handle error
+            // TODO: Handle error
         }
     }
 }
