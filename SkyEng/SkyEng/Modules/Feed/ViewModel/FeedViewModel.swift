@@ -122,10 +122,19 @@ private extension FeedViewModel {
         headers = words.enumerated().map { (index, word) in
             if word.isOpened {
                 let veiwModels = word.meanings.map { meaning -> TableViewCellViewModelConfigurable in
-                    var viewModel = FeedWordTableViewCellViewModel(text: meaning.translation.text)
+                    let transcription = "[" + meaning.transcription + "]"
+                    var viewModel = FeedWordTableViewCellViewModel(
+                        translation: meaning.translation.text,
+                        transcription: transcription,
+                        imageUrl: meaning.imageUrl
+                    )
                     viewModel.didTap = { [weak self] in
                         print("didTap")
                     }
+                    viewModel.didTapPlay = { [weak self] in
+                        print("didTapPlay")
+                    }
+
                     return viewModel
                 }
                 dataSource.append(veiwModels)

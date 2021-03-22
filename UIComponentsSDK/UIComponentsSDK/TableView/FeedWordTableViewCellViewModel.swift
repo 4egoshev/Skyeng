@@ -12,13 +12,23 @@ public typealias FeedWordTableViewCellConfigurator = TableViewCellConfigurator<F
 
 public struct FeedWordTableViewCellViewModel: FeedWordTableViewCellViewModelProtocol {
     
-    public var text: String
+    public var translation: String
+    
+    public var transcription: String
+    
+    public var imageUrl: String
     
     public var didTap: (() -> Void)?
     
+    public var didTapPlay: (() -> Void)?
+    
     public var configurator: TableViewCellConfigurable = FeedWordTableViewCellConfigurator()
     
-    public init(text: String) {
-        self.text = text
+    public init(translation: String,
+                transcription: String,
+                imageUrl: String) {
+        self.translation = translation
+        self.transcription = transcription
+        self.imageUrl = imageUrl
     }
 }

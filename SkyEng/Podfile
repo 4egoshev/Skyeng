@@ -24,6 +24,7 @@ end
 
 def network
   pod "Alamofire", '~> 5.1'
+  pod  'AlamofireImage' ,  '~> 4.1'
 end
 
 def pods

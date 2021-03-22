@@ -114,5 +114,6 @@ Pod::Spec.new do |spec|
 
   spec.dependency "SnapKit", "~> 5.0.0"
   spec.dependency "SwiftLint", '~> 0.43.1'
+  spec.dependency "AlamofireImage", '~> 4.1'
 
 end
