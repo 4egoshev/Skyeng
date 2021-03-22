@@ -14,5 +14,8 @@ class ModuleAssembly: Assembly {
         container.register(FeedAssemblyProtocol.self) { resolver in
             return FeedAssembly(resolver: resolver)
         }
+        container.register(MeaningAssemblyProtocol.self) { resolver in
+            return MeaningAssembly(resolver: resolver)
+        }
     }
 }

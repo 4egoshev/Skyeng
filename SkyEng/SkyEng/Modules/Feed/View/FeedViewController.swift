@@ -70,6 +70,7 @@ class FeedViewController: BaseViewController {
 
     override func bindUI() {
         loading <~ viewModel.loading
+        endEditing <~ viewModel.endEditing
         tableView.reactive.reloadData <~ viewModel.reloadData
         tableView.reactive.insertRows(animation: .fade) <~ viewModel.insertRows
         tableView.reactive.deleteRows(animation: .fade) <~ viewModel.deleteRows
@@ -102,6 +103,15 @@ private extension FeedViewController {
         BindingTarget(lifetime: lifetime) { [weak self] value in
             guard let self = self else { return }
             self.tableView.tableFooterView = value ? self.loader : nil
+        }
+    }
+
+    var endEditing: BindingTarget<Bool> {
+        BindingTarget(lifetime: lifetime) { [weak self] value in
+            guard let self = self else { return }
+            self.searchController.isActive = false
+            self.searchController.searchBar.resignFirstResponder()
+            self.searchController.searchBar.endEditing(value)
         }
     }
 }

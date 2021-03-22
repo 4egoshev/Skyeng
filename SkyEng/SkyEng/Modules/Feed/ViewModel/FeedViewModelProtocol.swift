@@ -19,6 +19,8 @@ protocol FeedViewModelProtocol {
 
     var loading: Signal<Bool, Never> { get }
 
+    var endEditing: Signal<Bool, Never> { get }
+
     var searchtext: String { get set }
 
     var headers: [TableReusableViewModelConfigurable] { get set }

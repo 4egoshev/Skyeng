@@ -24,6 +24,9 @@ class FeedViewModel: FeedViewModelProtocol {
     var loading: Signal<Bool, Never>
     private let loadingObserver: Signal<Bool, Never>.Observer
 
+    var endEditing: Signal<Bool, Never>
+    private let endEditingObserver: Signal<Bool, Never>.Observer
+
     var searchtext: String = "" {
         didSet {
             getSearch(text: searchtext)
@@ -54,6 +57,7 @@ class FeedViewModel: FeedViewModelProtocol {
         (insertRows, insertRowsObserver) = Signal.pipe()
         (deleteRows, deleteRowsObserver) = Signal.pipe()
         (loading, loadingObserver) = Signal.pipe()
+        (endEditing, endEditingObserver) = Signal.pipe()
 	}
 
     func viewDidLoad() {
@@ -129,9 +133,12 @@ private extension FeedViewModel {
                         imageUrl: meaning.imageUrl
                     )
                     viewModel.didTap = { [weak self] in
-                        print("didTap")
+                        guard let self = self else { return }
+                        self.endEditingObserver.send(value: true)
+                        self.router.showMeaning()
                     }
                     viewModel.didTapPlay = { [weak self] in
+                        guard let self = self else { return }
                         print("didTapPlay")
                     }
 

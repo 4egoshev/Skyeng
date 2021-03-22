@@ -10,4 +10,5 @@ import UIKit
 
 protocol FeedRouterProtocol: Router, ErrorRoutable, PlaceholderRoutalble {
 
+    func showMeaning()
 }

@@ -17,4 +17,9 @@ class FeedRouter: FeedRouterProtocol {
     init(resolver: Resolver) {
         self.resolver = resolver
     }
+
+    func showMeaning() {
+        guard let controller = resolver.resolve(MeaningAssemblyProtocol.self)?.make() else { return }
+        push(controller: controller)
+    }
 }
