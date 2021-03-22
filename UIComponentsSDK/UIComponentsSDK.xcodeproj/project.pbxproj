@@ -42,6 +42,8 @@
 		5E8615012607A6920083A331 /* FeedWordTableReusableViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8614FE2607A6920083A331 /* FeedWordTableReusableViewModelProtocol.swift */; };
 		5E8615022607A6920083A331 /* FeedWordTableReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8614FF2607A6920083A331 /* FeedWordTableReusableView.swift */; };
 		5E8615032607A6920083A331 /* FeedWordTableReusableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8615002607A6920083A331 /* FeedWordTableReusableViewModel.swift */; };
+		5EAC9A3F26083F4F00941879 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EAC9A3E26083F4F00941879 /* Color.swift */; };
+		5EAC9A442608415400941879 /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EAC9A432608415400941879 /* ShadowView.swift */; };
 		DA2132BBC52FF12D35623415 /* libPods-UIComponentsSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 170D9A4A214B5576D543AC93 /* libPods-UIComponentsSDK.a */; };
 /* End PBXBuildFile section */
 
@@ -97,6 +99,8 @@
 		5E8614FE2607A6920083A331 /* FeedWordTableReusableViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedWordTableReusableViewModelProtocol.swift; sourceTree = "<group>"; };
 		5E8614FF2607A6920083A331 /* FeedWordTableReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedWordTableReusableView.swift; sourceTree = "<group>"; };
 		5E8615002607A6920083A331 /* FeedWordTableReusableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedWordTableReusableViewModel.swift; sourceTree = "<group>"; };
+		5EAC9A3E26083F4F00941879 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		5EAC9A432608415400941879 /* ShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -218,6 +222,7 @@
 			isa = PBXGroup;
 			children = (
 				5E701B212607DBC100C02FCD /* UI.swift */,
+				5EAC9A3E26083F4F00941879 /* Color.swift */,
 				5E701B252607E77500C02FCD /* KeyboardHandler.swift */,
 			);
 			path = Common;
@@ -248,6 +253,7 @@
 			children = (
 				5E701B202607DBB700C02FCD /* Common */,
 				5E85353D2606778A000658F2 /* Protocols */,
+				5EAC9A47260843D500941879 /* CustomViews */,
 				5E85352B260671BD000658F2 /* Extensions */,
 				5E8534C926066CE3000658F2 /* DDM */,
 				5E86F6892606AFF700E27727 /* CollectionView */,
@@ -365,6 +371,14 @@
 			children = (
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		5EAC9A47260843D500941879 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				5EAC9A432608415400941879 /* ShadowView.swift */,
+			);
+			path = CustomViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -505,6 +519,7 @@
 			files = (
 				5E8615022607A6920083A331 /* FeedWordTableReusableView.swift in Sources */,
 				5E853538260673C5000658F2 /* UICollectionView+Extensions.swift in Sources */,
+				5EAC9A3F26083F4F00941879 /* Color.swift in Sources */,
 				5E86149A2607979A0083A331 /* TableReusableViewConfigurable.swift in Sources */,
 				5E13C0CE2606CBB900240E69 /* FeedWordTableViewCell.swift in Sources */,
 				5E8534CB26066D01000658F2 /* Configurable.swift in Sources */,
@@ -534,6 +549,7 @@
 				5E13C0E12606D88600240E69 /* CollectionReusableSupplementaryViewConfigurable.swift in Sources */,
 				5E13C0CF2606CBB900240E69 /* FeedWordTableViewCellViewModel.swift in Sources */,
 				5E85351C26067024000658F2 /* CollectionViewCellConfigurable.swift in Sources */,
+				5EAC9A442608415400941879 /* ShadowView.swift in Sources */,
 				5E701B262607E77500C02FCD /* KeyboardHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

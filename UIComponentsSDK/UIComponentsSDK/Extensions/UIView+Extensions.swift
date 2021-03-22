@@ -10,7 +10,7 @@ import UIKit
 import SnapKit
 
 //MARK: Scale
-extension UIView {
+public extension UIView {
     func setScaleState(duration: TimeInterval = 0.2,
                        scaleValue: CGFloat = 0.92,
                        completion: (() -> Void)? = nil) {
@@ -28,5 +28,17 @@ extension UIView {
         } completion: { _ in
             completion?()
         }
+    }
+}
+
+//MARK: Shadow
+public extension UIView {
+    func addShadow(offset: CGSize = .zero, color: UIColor = .black, opacity: Float = 0.2, radius: CGFloat = 6.0) {
+        self.layer.masksToBounds = false
+        self.layer.shadowColor = color.cgColor
+        self.layer.shadowOffset = offset
+        self.layer.shadowOpacity = opacity
+        self.layer.shadowRadius = radius
+        self.layer.shadowPath = UIBezierPath(rect: self.bounds).cgPath
     }
 }

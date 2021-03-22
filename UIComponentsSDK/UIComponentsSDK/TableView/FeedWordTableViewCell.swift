@@ -10,8 +10,8 @@ import UIKit
 
 public class FeedWordTableViewCell: UITableViewCell, Configurable {
     
-    private lazy var containerView: UIView = {
-        let view = UIView()
+    private lazy var containerView: ShadowView = {
+        let view = ShadowView()
         view.backgroundColor = .white
         view.layer.cornerRadius = 6
         return view
@@ -29,7 +29,7 @@ public class FeedWordTableViewCell: UITableViewCell, Configurable {
     }
 
     public func setupUI() {
-        backgroundColor = .lightGray
+        backgroundColor = Color.lightGray
         selectionStyle = .none
         
         contentView.addSubview(containerView)
