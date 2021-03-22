@@ -14,6 +14,8 @@ public struct FeedWordTableViewCellViewModel: FeedWordTableViewCellViewModelProt
     
     public var text: String
     
+    public var didTap: (() -> Void)?
+    
     public var configurator: TableViewCellConfigurable = FeedWordTableViewCellConfigurator()
     
     public init(text: String) {

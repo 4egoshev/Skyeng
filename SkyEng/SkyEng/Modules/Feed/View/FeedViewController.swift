@@ -91,9 +91,7 @@ private extension FeedViewController {
         keyboardHandler.setup(scrollView: tableView)
         keyboardHandler.didTap = { [weak self] in
             guard let self = self else { return }
-            self.searchController.isActive = false
-                self.searchController.searchBar.resignFirstResponder()
-                self.searchController.searchBar.endEditing(true)
+            self.searchController.searchBar.endEditing(true)
         }
     }
 }

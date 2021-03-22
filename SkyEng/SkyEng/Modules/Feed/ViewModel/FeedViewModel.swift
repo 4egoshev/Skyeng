@@ -96,7 +96,6 @@ private extension FeedViewModel {
             .observeValues { [weak self] size in
                 guard let self = self else { return }
                 self.isLastPage = size == 0 || size % self.pageSize != 0
-//                self.loadingObserver.send(value: !self.isLastPage)
             }
 
         model.error
@@ -122,8 +121,12 @@ private extension FeedViewModel {
         dataSource.removeAll()
         headers = words.enumerated().map { (index, word) in
             if word.isOpened {
-                let veiwModels = word.meanings.map {
-                    FeedWordTableViewCellViewModel(text: $0.translation.text)
+                let veiwModels = word.meanings.map { meaning -> TableViewCellViewModelConfigurable in
+                    var viewModel = FeedWordTableViewCellViewModel(text: meaning.translation.text)
+                    viewModel.didTap = { [weak self] in
+                        print("didTap")
+                    }
+                    return viewModel
                 }
                 dataSource.append(veiwModels)
             } else {

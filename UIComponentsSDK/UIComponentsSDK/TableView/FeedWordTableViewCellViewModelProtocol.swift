@@ -11,4 +11,6 @@ import Foundation
 public protocol FeedWordTableViewCellViewModelProtocol: TableViewCellViewModelConfigurable {
         
     var text: String { get }
+    
+    var didTap: (() -> Void)? { get set }
 }
