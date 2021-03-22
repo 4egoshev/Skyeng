@@ -19,6 +19,7 @@
 		5E13C0BC2606C58600240E69 /* WordEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E13C0BB2606C58600240E69 /* WordEntity.swift */; };
 		5E3817112607B34A00C36A82 /* MeaningEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3817102607B34A00C36A82 /* MeaningEntity.swift */; };
 		5E3817232607BAF500C36A82 /* Translation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3817222607BAF500C36A82 /* Translation.swift */; };
+		5E5711AE26085596002929BD /* AlertRoutable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5711AD26085596002929BD /* AlertRoutable.swift */; };
 		5E701B472607EC8800C02FCD /* FeedWord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E701B462607EC8800C02FCD /* FeedWord.swift */; };
 		5E701B4F2607F36A00C02FCD /* Reactive+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E701B4E2607F36A00C02FCD /* Reactive+Extensions.swift */; };
 		5E85326826064EF5000658F2 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E85326726064EF5000658F2 /* Router.swift */; };
@@ -77,6 +78,7 @@
 		5E13C0BB2606C58600240E69 /* WordEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordEntity.swift; sourceTree = "<group>"; };
 		5E3817102607B34A00C36A82 /* MeaningEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeaningEntity.swift; sourceTree = "<group>"; };
 		5E3817222607BAF500C36A82 /* Translation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Translation.swift; sourceTree = "<group>"; };
+		5E5711AD26085596002929BD /* AlertRoutable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertRoutable.swift; sourceTree = "<group>"; };
 		5E701B462607EC8800C02FCD /* FeedWord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedWord.swift; sourceTree = "<group>"; };
 		5E701B4E2607F36A00C02FCD /* Reactive+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Reactive+Extensions.swift"; sourceTree = "<group>"; };
 		5E85326726064EF5000658F2 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
@@ -205,6 +207,7 @@
 			isa = PBXGroup;
 			children = (
 				5E85326726064EF5000658F2 /* Router.swift */,
+				5E5711AD26085596002929BD /* AlertRoutable.swift */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -533,6 +536,7 @@
 				485251ED62FEFF2823FB9CD5 /* FeedAssembly.swift in Sources */,
 				5E13C0A42606C1E000240E69 /* WordsService.swift in Sources */,
 				5E3817112607B34A00C36A82 /* MeaningEntity.swift in Sources */,
+				5E5711AE26085596002929BD /* AlertRoutable.swift in Sources */,
 				0EC807E8075F48B2C297CB0B /* FeedRouterProtocol.swift in Sources */,
 				91C2444AF6E925E275AD80DC /* FeedRouter.swift in Sources */,
 				5E3817232607BAF500C36A82 /* Translation.swift in Sources */,
