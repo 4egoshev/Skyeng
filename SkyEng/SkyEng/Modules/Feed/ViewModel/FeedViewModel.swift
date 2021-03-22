@@ -21,6 +21,9 @@ class FeedViewModel: FeedViewModelProtocol {
     var deleteRows: Signal<[IndexPath], Never>
     private let deleteRowsObserver: Signal<[IndexPath], Never>.Observer
 
+    var loading: Signal<Bool, Never>
+    private let loadingObserver: Signal<Bool, Never>.Observer
+
     var searchtext: String = "" {
         didSet {
             getSearch(text: searchtext)
@@ -50,6 +53,7 @@ class FeedViewModel: FeedViewModelProtocol {
         (reloadData, reloadDataObserver) = Signal.pipe()
         (insertRows, insertRowsObserver) = Signal.pipe()
         (deleteRows, deleteRowsObserver) = Signal.pipe()
+        (loading, loadingObserver) = Signal.pipe()
 	}
 
     func viewDidLoad() {
@@ -60,6 +64,7 @@ class FeedViewModel: FeedViewModelProtocol {
     func willDisplayHeader(at section: Int) {
         guard !isLastPage, !isLoading, section > headers.count - pageSize / 2 else { return }
         isLoading = true
+        loadingObserver.send(value: true)
         getSearch(text: searchtext, page: headers.count / pageSize)
     }
 }
@@ -73,6 +78,7 @@ private extension FeedViewModel {
                 guard let self = self else { return }
 
                 self.isLoading = false
+                self.loadingObserver.send(value: false)
                 self.setupDataSource(with: words)
 
                 if let indexPaths = self.indexPaths, let section = indexPaths.first?.section {
@@ -90,12 +96,21 @@ private extension FeedViewModel {
             .observeValues { [weak self] size in
                 guard let self = self else { return }
                 self.isLastPage = size == 0 || size % self.pageSize != 0
+//                self.loadingObserver.send(value: !self.isLastPage)
             }
 
         model.error
             .signal
             .observeValues { [weak self] error in
+                guard let self = self else { return }
                 print(error?.localizedDescription)
+            }
+
+        loading
+            .signal
+            .observeValues { [weak self] isLoading in
+                guard let self = self else { return }
+                self.isLoading = isLoading
             }
     }
 }

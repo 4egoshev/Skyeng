@@ -44,6 +44,12 @@ class FeedViewController: BaseViewController {
         return controller
     }()
 
+    private lazy var loader: UIActivityIndicatorView = {
+        let loader = UIActivityIndicatorView(style: .gray)
+        loader.startAnimating()
+        return loader
+    }()
+
     private var keyboardHandler = KeyboardHandler()
 
     private var viewModel: FeedViewModelProtocol
@@ -63,6 +69,7 @@ class FeedViewController: BaseViewController {
     }
 
     override func bindUI() {
+        loading <~ viewModel.loading
         tableView.reactive.reloadData <~ viewModel.reloadData
         tableView.reactive.insertRows(animation: .fade) <~ viewModel.insertRows
         tableView.reactive.deleteRows(animation: .fade) <~ viewModel.deleteRows
@@ -87,6 +94,16 @@ private extension FeedViewController {
             self.searchController.isActive = false
                 self.searchController.searchBar.resignFirstResponder()
                 self.searchController.searchBar.endEditing(true)
+        }
+    }
+}
+
+// MARK: - Reactive
+private extension FeedViewController {
+    var loading: BindingTarget<Bool> {
+        BindingTarget(lifetime: lifetime) { [weak self] value in
+            guard let self = self else { return }
+            self.tableView.tableFooterView = value ? self.loader : nil
         }
     }
 }

@@ -17,6 +17,8 @@ protocol FeedViewModelProtocol {
 
     var deleteRows: Signal<[IndexPath], Never> { get }
 
+    var loading: Signal<Bool, Never> { get }
+
     var searchtext: String { get set }
 
     var headers: [TableReusableViewModelConfigurable] { get set }
